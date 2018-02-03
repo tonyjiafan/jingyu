@@ -1,0 +1,125 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer{
+  width: 100%;
+  height: 744px;
+  background: url('../images/footor.png') no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+.footer-border{
+  height: 2px;
+  width: 1500px;
+  margin: -20px auto 40px;
+  border-bottom: 1px solid #fff;
+}
+.company-info{
+  width: 1200px;
+  margin: auto;
+  text-align: left;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 200;
+  margin-top: -30px;
+}
+.ft-list-warp{
+  width: 1200px;
+  height: auto;
+  margin: 300px auto 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.ft-list-warp h3{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 60px;
+}
+.ft-list-warp p{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.ft-list-warp p a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.ft-list-warp p a:hover{
+  text-decoration: underline;
+}
+.last-ft-list-item {
+  text-align: center;
+}
+.last-ft-list-item p{
+  text-align: center;
+  font-size: 24px;
+}
+.last-ft-list-item p:nth-child(2) img{
+  vertical-align: -20px;
+  margin: 10px auto;
+  margin-right: 10px;
+}
+
+
+/* mian-fei-ti-yan */
+.mian-fei-ti-yan{
+  width: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 4;
+}
+.mian-fei-ti-yan .btn{
+  position: relative;
+  width: 320px;
+  height: 168px;
+  display: block;
+  background: url('../images/lijitiyan_btn.png') no-repeat center;
+  background-size: cover;
+  text-decoration: none;
+  color: #fff;
+}
+.mian-fei-ti-yan .btn span{
+  position: absolute;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  top: 40px;
+  left: 110px;
+  z-index: 2;
+}
+.mian-fei-btn-warp{
+  width: 1200px;
+  margin: auto;
+  margin-bottom: -450px;
+  padding-top: 80px;
+}
+.mian-fei-ti-yan .pad-warp{
+  width: 100%;
+  height: 570px;
+  background: url('../images/pad.png') no-repeat center;
+  background-size: cover;
+  margin-bottom: -263px;
+}
