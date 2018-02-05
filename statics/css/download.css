@@ -1,0 +1,50 @@
+.download-box{
+  width: 1200px;
+  height: auto;
+  margin: 0px auto 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.download-item{
+  width: 360px;
+  height: 390px;
+  background: #fff;
+  box-shadow: 0 0 17px #e8e8e8;
+  border-radius: 4px;
+  margin: 50px 0 0;
+  text-align: center;
+  position: relative;
+}
+.download-item .title{
+  font-size: 24px;
+  color: #333333;
+  font-weight: 300;
+  margin: 40px auto 30px;
+}
+.download-item p {
+  text-align: left;
+  width: 320px;
+  margin: 10px auto;
+  font-size: 18px;
+  color: #999999;
+  font-weight: 300;
+}
+.download-item .title-2 {
+  margin: 10px auto 60px;
+}
+.download-item .btn{
+  display: block;
+  width: 120px;
+  height: 60px;
+  background: #999;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -60px;
+  cursor: pointer;
+}
+.download-item img {
+  display: block;
+  margin: auto;
+}

@@ -24,6 +24,21 @@ header{
   background: url('../images/nei_banner.png') no-repeat center;
   background-size: cover;
 }
+/* 面包屑 */
+.common-nav-list{
+  width: 1200px;
+  margin: 50px auto 0;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+.common-nav-list p{
+  color: #666666;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
 /* 用户头像样式 */
 .user-box{
   width: 200px;
