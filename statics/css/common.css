@@ -97,11 +97,17 @@ header{
 
 /* 分割线 */
 .common-middel-title-1{
+  text-align: center;
+  width:1200px;
+  margin: auto;
   color: #333;
   font-size: 36px;
   font-weight: 300;
 }
 .common-middel-title-2{
+  text-align: center;
+  width:1200px;
+  margin: auto;
   color: #777;
   font-size: 24px;
   margin-top: 20px;
