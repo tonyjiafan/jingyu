@@ -15,10 +15,17 @@ header{
   background-size: cover;
   position: relative;
 }
+.home-head-warp{
+  width: 100%;
+  height: 90px;
+  position: relative;
+  background: rgba(0,0,0,0.01);
+  z-index: 10;
+}
 .home-nav{
   width: 1200px;
   height: 90px;
-  background: rgba(0,0,0,0.1);
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -38,7 +45,6 @@ header{
 .home-nav-item{
   display: block;
   color: #fff;
-  padding: 4px 0px;
   /* background: rgba(0,0,0,.2); */
   cursor: pointer;
   border-radius: 3px;
@@ -50,7 +56,10 @@ header{
   text-decoration: none;
   color: #fff;
   /* outline: 1px solid red; */
-  padding: 6px 0px;
+  display: inline-block;
+  height: 90px;
+  line-height: 90px;
+  padding: 0px 2px;
 }
 .home-nav-item:hover .border-bottom{
   display: block;
@@ -62,7 +71,7 @@ header{
   border-radius: 3px;
   background: #ffffff;
   position: absolute;
-  bottom: -29px;
+  bottom: 1px;
   left: 0;
   display: none;
 }
