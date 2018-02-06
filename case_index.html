@@ -206,9 +206,18 @@
 
   </div>
 </body>
-<script type="text/javascript" src="./statics/js/case_index.js"></script>
 <script>
-  // 列表切换图片
-
+$(function() {
+  // 分页按钮事件
+  $('.page-number-btn').on('click', function(e) {
+    $(e.target).css({
+      background: '#54A7F5',
+      color: '#ffffff'
+    }).siblings().css({
+      background: '#ffffff',
+      color: '#333333'
+    })
+  })
+})
 </script>
 </html>

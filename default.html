@@ -78,12 +78,6 @@
           <a class="swiper-slide" href="http://www.hupu.com">
             <div class="swiper-slide" style="background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;"></div>
           </a>
-          <a class="swiper-slide" href="http://www.sina.cn">
-            <div class="swiper-slide" style="background: url('./statics/images/banner.png') no-repeat center;background-size: cover;"></div>
-          </a>
-          <a class="swiper-slide" href="http://www.vip.com">
-            <div class="swiper-slide" style="background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;"></div>
-          </a>
         </div>
         <!-- 焦点 -->
         <div class="swiper-pagination"></div>
@@ -327,7 +321,6 @@
 <script type="text/javascript" src="./statics/js/base/jquery.corner.js"></script>
 <script type="text/javascript" src="./statics/js/base/jquery.roundabout.js"></script>
 <script type="text/javascript" src="./statics/js/base/jquery.roundabout-shapes.js"></script>
-<script type="text/javascript" src="./statics/js/default.js"></script>
 <script>
   var changeCard = function (s){
     var elements = $('.card-li-item')
@@ -351,5 +344,44 @@
       }
     })
   }
+  $(function() {
+    if($('#gla')){
+  		$('.gla_inbox').corner('5px');
+  		$('#gla_box>ul').roundabout({
+  			minOpacity:1,
+  			btnNext: ".next",
+  			duration: 1000,
+  			reflect: true,
+  			btnPrev: '.prev',
+  			// autoplay:true,
+  			autoplayDuration:5000,
+  			tilt:0,
+  			shape: 'figure8'
+  		});
+  	}
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + '</span>';
+        },
+      },
+    });
+    // 列表切换图片
+    $('.plan-list').on('click', function(e){
+      var srcTage = $(e.target).attr('name')
+      var imgs = $('.plan-img')
+      Array.prototype.forEach.call(imgs, function (el, index) {
+        $(el).hide()
+        $(el).attr('src', `./statics/images/plan-${srcTage}.png`).fadeIn(200)
+      })
+    })
+  })
 </script>
 </html>
