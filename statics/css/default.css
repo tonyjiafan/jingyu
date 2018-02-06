@@ -61,9 +61,11 @@ header{
   line-height: 90px;
   padding: 0px 2px;
 }
+
 .home-nav-item:hover .border-bottom{
   display: block;
 }
+
 .border-bottom{
   display: inline-block;
   width: 100%;
@@ -77,7 +79,6 @@ header{
 }
 .home-nav-login{
   display: block;
-  position: relative;
   z-index: 2;
   width: 68px;
   height: 32px;
@@ -93,6 +94,24 @@ header{
   height: 32px;
   line-height: 32px;
   border-radius: 6px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.white-box{
+  height: 50px;
+  width: 6px;
+  background: #ffffff30;
+  box-shadow: 0 0 20px #fff;
+  position: absolute;
+  top: -10px;
+  transform: rotate(45deg);
+  left: -40px;
+  border: transparent;
+  transition: .4s;
+}
+.home-nav-login a:hover .white-box{
+  left: 90px;
 }
 .login{
   background: url('../images/login.png') no-repeat center;
