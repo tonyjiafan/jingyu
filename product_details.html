@@ -94,8 +94,11 @@
           <span class="change-item" name="30" tag="详细介绍">详细介绍</span>
           <span class="change-item" name="215" tag="使用帮助">使用帮助</span>
         </div>
-        <div class="tab-content" id="tab-conten">
+        <div class="tab-content" id="tab-conten-1">
           详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍
+        </div>
+        <div class="tab-content tab-content-2" id="tab-conten-2">
+          使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助
         </div>
       </div>
 
@@ -220,9 +223,11 @@ $(function() {
     $(e.target).css({color: '#333'}).siblings().css({color: '#999'})
     $('#tab-bottom-border').css({left: `${left}px`})
     if (tag == '详细介绍') {
-      $('#tab-conten').text('详细介绍详细介绍详细介绍详细介绍详细介绍')
+      $('#tab-conten-1').show()
+      $('#tab-conten-2').hide()
     } else if (tag == '使用帮助') {
-      $('#tab-conten').text('使用帮助使用帮助使用帮助使用帮助使用帮助')
+      $('#tab-conten-2').show()
+      $('#tab-conten-1').hide()
     }
   })
 })

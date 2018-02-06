@@ -70,8 +70,7 @@
 }
 .common-activi-types span{
   display: inline-block;
-  width: 88px;
-  height: 36px;
+  padding: 0px 10px;
   border: 1px solid #e8e8e8;
   text-align: center;
   line-height: 36px;
@@ -80,7 +79,9 @@
   cursor: pointer;
 }
 .common-activi-types span:hover{
-  background: #54A7F5;
+  background: #7186F5;
+  box-shadow: 0 0 20px #7186F5;
+  border: 1px solid #7186F5;
   color: #ffffff;
 }
 
@@ -132,7 +133,9 @@
   font-weight: 300;
   text-indent: 2em;
 }
-
+.tab-content-2 {
+  display: none;
+}
 
 /* common-modules-box */
 .common-modules-box{
