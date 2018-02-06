@@ -22,6 +22,14 @@
   box-shadow: 0 0 17px #e8e8e8;
   margin-bottom: 50px;
 }
+.common-activity-list-item:hover{
+  box-shadow: 0 4px 70px -18px #444;
+}
+.list-a-warp{
+  display: block;
+  width: 100%;
+  height: 458px;
+}
 .title-img-warp{
   width: 365px;
   height: 300px;
@@ -119,6 +127,9 @@
   font-weight: 300;
   margin: 0 30px;
   cursor: pointer;
+}
+.change-item-2{
+  color: #999999;
 }
 .tab-content{
   width: 1180;
