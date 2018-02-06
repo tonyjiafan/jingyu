@@ -5,7 +5,7 @@ html {
     -ms-text-size-adjust: 100%;
 }
 body{
-  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "PingFang SC", "黑体", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
@@ -147,7 +147,7 @@ header{
 /* 面包屑 */
 .common-nav-list{
   width: 1200px;
-  margin: 50px auto 0;
+  margin: 20px auto 0;
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 20px;
   margin-bottom: 50px;
