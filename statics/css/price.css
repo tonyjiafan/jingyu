@@ -1,0 +1,119 @@
+.price-content{
+  margin-bottom: 200px;
+}
+.price-box{
+  width: 1200px;
+  height: auto;
+  margin: 0px auto 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.price-item{
+  width: 386px;
+  height: 480px;
+  background: #fff;
+  box-shadow: 0 0 17px #e8e8e8;
+  border-radius: 4px;
+  margin: 50px 0 50px;
+  text-align: center;
+  position: relative;
+  transition: all .5s;
+}
+.price-item:hover{
+  box-shadow: 0 4px 70px -18px #444;
+}
+.price-item .title{
+  font-size: 24px;
+  color: #333333;
+  font-weight: 300;
+  margin: 40px auto 30px;
+}
+.price-item .title-2{
+  margin: 0 auto 50px;
+}
+.price-item p {
+  text-align: left;
+  width: 320px;
+  margin: 10px auto;
+  font-size: 18px;
+  color: #999999;
+  font-weight: 300;
+}
+.price-item ol{
+  list-style: none;
+  width:330px;
+  text-align: left;
+  margin: 0px auto;
+}
+.price-item ol li{
+  list-style-type:decimal;
+  list-style-position:inside;
+  padding: 0;
+  margin: 4px 0;
+  text-align: left;
+  width: 320px;
+  font-size: 16px;
+  color: #999999;
+  font-weight: 300;
+  white-space: nowrap;
+}
+.price-item .price-number{
+  display: inline-block;
+  width: 220px;
+  height: 88px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -110px;
+  line-height: 68px;
+  font-size: 20px;
+  color: #fc5144;
+}
+.price-item .btn{
+  display: inline-block;
+  width: 220px;
+  height: 88px;
+  background: #999;
+  position: absolute;
+  bottom: -51px;
+  left: 50%;
+  margin-left: -110px;
+  cursor: pointer;
+  transition: all .5s;
+  line-height: 68px;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 300;
+  background-size: cover;
+}
+.price-item .btn-1{
+  background: url('../images/price1_normal.png') no-repeat center;
+}
+.price-item .btn-1:hover{
+  background: url('../images/price1_select.png') no-repeat center;
+}
+.price-item .btn-2{
+  background: url('../images/price2_normal.png') no-repeat center;
+}
+.price-item .btn-2:hover{
+  background: url('../images/price2_select.png') no-repeat center;
+}
+.price-item .btn-3{
+  background: url('../images/price3_normal.png') no-repeat center;
+}
+.price-item .btn-3:hover{
+  background: url('../images/price3_select.png') no-repeat center;
+}
+.price-item .btn-4{
+  background: url('../images/price4_normal.png') no-repeat center;
+}
+.price-item .btn-4:hover{
+  background: url('../images/price4_select.png') no-repeat center;
+}
+.price-item img {
+  display: block;
+  margin: 30px auto 0;
+  width: 168px;
+  height: 168px;
+}
