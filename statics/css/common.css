@@ -135,6 +135,8 @@ header{
   text-align: center;
   text-decoration: none;
   color: #fff;
+  /* outline: 1px solid red; */
+  padding: 6px 0px;
 }
 .common-nav-item:hover .border-bottom{
   display: block;
@@ -164,6 +166,11 @@ header{
   text-align: center;
   text-decoration: none;
   color: #fff;
+  /* outline: 1px solid red; */
+  width: 68px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 6px;
 }
 .login{
   background: url('../images/login.png') no-repeat center;
