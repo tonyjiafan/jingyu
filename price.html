@@ -1,12 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 <head>
   <meta charset="UTF-8">
   <title>产品报价</title>
   <link rel="stylesheet" type="text/css" href="./statics/css/common.css">
   <link rel="stylesheet" type="text/css" href="./statics/css/price.css">
+  <script type="text/javascript" src="./statics/js/base/jquery-1.7.2.min.js"></script>
 </head>
-<body>
+<body class="" style="position: relative;">
+  <!-- 登录弹窗 -->
+  <div class="login-box-motai">
+    <div class="login-module-box">
+      <img class="login-colse-btn" src="./statics/images/login-colse.png" alt="">
+      <!-- 登录注册内容区 -->
+      <div class="common-tabs-box">
+        <div class="tab-change">
+          <label class="tab-bottom-border" id="tab-bottom-border"></label>
+          <span class="change-item" name="48" tag="注册">注册</span>
+          <span class="change-item change-item-2" name="191" tag="登录">登录</span>
+        </div>
+        <!-- 注册 -->
+        <div class="tab-content" id="tab-conten-1">
+          <p class="prompt-text-register"> </p>
+          <p class="input-title input-title-3">账号</p>
+          <input class="login-form-input" name="register-username" id="register-username" type="text">
+          <p class="input-title input-title-3">验证码</p>
+          <div class="input-warp-box">
+            <input class="login-form-input" name="text" id="register-verification-code" type="text">
+            <span class="get-verification-code">获取验证码</span>
+            <span class="number-time">60s</span>
+          </div>
+          <p class="input-title input-title-3">密码</p>
+          <input class="login-form-input" name="register-password" id="register-password" type="text">
+          <div class="login-button" name="login-btn">
+            <span class="login-text" id="register-submit-btn">注册</span>
+          </div>
+          <div class="icon-warp">
+            <div class="qq-box"><img class="icon-img" src="./statics/images/qq_select.png" alt=""></div>
+            <div class="weixin-box"><img class="icon-img" src="./statics/images/weixin_select.png" alt=""></div>
+          </div>
+        </div>
+        <!-- 登录 -->
+        <div class="tab-content tab-content-2" id="tab-conten-2">
+          <p class="prompt-text-login"> </p>
+          <p class="input-title">注册账号</p>
+          <input class="login-form-input user-input" name="username" id="input-username" type="text">
+          <p class="input-title input-title-2">登录密码</p>
+          <div class="input-warp-box" id="input-warp-box">
+            <input class="login-form-input" name="password" id="input-password" type="password">
+            <img class="pwd-state-img" id="pwd-state-img" src="./statics/images/pwd_show.png" alt="">
+          </div>
+          <div class="forget-box">
+            <a class="forget-pwd" href="#">忘记密码?</a>
+          </div>
+          <div class="login-button" name="login-btn">
+            <span class="login-text" id="login-submit-btn">立即登录</span>
+          </div>
+          <div class="icon-warp">
+            <div class="qq-box"><img class="icon-img" src="./statics/images/qq_select.png" alt=""></div>
+            <div class="weixin-box"><img class="icon-img" src="./statics/images/weixin_select.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="login-box-footer"></div>
+    </div>
+  </div>
+  <!--  -->
   <div class="home-content">
     <header>
       <div class="home-nav">
@@ -59,12 +118,12 @@
           </span>
         </div>
         <span class="home-nav-login login">
-          <a href="./login.html">登录
+          <a href="javascript:0" id="login-btn">登录
           <span class="white-box"></span>
         </a>
         </span>
         <span class="home-nav-login zhuce">
-          <a href="./register.html">注册
+          <a href="./register.html" id="register-btn">注册
           <span class="white-box"></span>
         </a>
         </span>
@@ -182,4 +241,114 @@
 
   </div>
 </body>
+<script>
+  $(function(){
+    // 打开
+    $('#login-btn').on('click', function() {
+      $('body').addClass('loging-body')
+      $('.login-box-motai').fadeIn(100)
+    })
+    // 关闭
+    $('.login-colse-btn').on('click', function() {
+      $('body').removeClass('loging-body')
+      $('.login-box-motai').hide()
+    })
+    // tabs 切换
+    $('.change-item').on('click', function(e) {
+      var left = $(e.target).attr('name')
+      var tag = $(e.target).attr('tag')
+      $(e.target).css({color: '#333'}).siblings().css({color: '#999'})
+      $('#tab-bottom-border').css({left: `${left}px`})
+      if (tag == '登录') {
+        $('#tab-conten-2').fadeIn(500)
+        $('#tab-conten-1').hide()
+      } else if (tag == '注册') {
+        $('#tab-conten-1').fadeIn(500)
+        $('#tab-conten-2').hide()
+      }
+      // 清空提示
+      $('.prompt-text-login').text('')
+      $('.prompt-text-register').text('')
+      userState.forEach(function(e, i) {
+        $(e.dom).removeClass('warnning-input')
+      })
+    })
+
+    // 密码显示切换
+    $('#pwd-state-img').data('flag', true).on('click', function() {
+      // console.log($('#input-password').attr('type'))
+      var inputVal = $('#input-password').val()
+      if (inputVal == '') return
+      if ($('#input-password').attr('type') == 'text') {
+        var inputEl = $('<input class="login-form-input password-input" name="username" id="input-password" type="password">')
+        $(inputEl).val(inputVal)
+        $('#input-password').remove()
+        $('#input-warp-box').append(inputEl)
+
+        $(this).attr('src', `./statics/images/pwd_show.png`)
+      } else {
+        var inputEl = $('<input class="login-form-input password-input" name="username" id="input-password" type="text">')
+        $(inputEl).val(inputVal)
+        $('#input-password').remove()
+        $('#input-warp-box').append(inputEl)
+
+        $(this).attr('src', `./statics/images/pwd_hide.png`)
+      }
+    })
+
+
+    // 登录 提交
+    var userState = [
+      {name: 'userName', valState: false, dom: '#input-username'},
+      {name: 'password', valState: false, dom: '#input-password'}
+    ]
+    $('#login-submit-btn').on('click', function() {
+      console.log('clcik')
+      var prompt = $('.prompt-text-login')
+      prompt.text('')
+      var userVal = $('#input-username').val(),
+          pwaVal = $('#input-password').val();
+      if(userVal == '' || pwaVal == ''){
+        prompt.text('账号或密码不能为空').css({
+          opacity: '1',
+          color: '#ff0900'
+        })
+      } else if (userVal == '123' && pwaVal == '123') {
+        console.log(`${userVal}------${pwaVal}`)
+        prompt.text('登录成功').css({
+          opacity: '1',
+          color: '#68d96d'
+        })
+        userState[0].valState = userVal !== '123' ? false : true;
+        userState[1].valState = pwaVal !== '123' ? false : true;
+      } else {
+        prompt.text('你的账户或密码不正确').css({
+          opacity: '1',
+          color: '#ff0900'
+        })
+        userState[0].valState = userVal !== '123' ? false : true;
+        userState[1].valState = pwaVal !== '123' ? false : true;
+      }
+      // 最后验证的 dom 状态显示
+      userState.forEach(function(e, i) {
+        console.log(e.valState)
+        if (e.valState) {
+          $(e.dom).removeClass('warnning-input')
+        } else {
+          $(e.dom).addClass('warnning-input')
+        }
+      })
+    })
+
+    // 注册 提交
+    $('#register-submit-btn').on('click', function() {
+      var prompt = $('.prompt-text-register')
+      prompt.text('')
+      prompt.text('账号或密码不能为空').css({
+        opacity: '1',
+        color: '#ff0900'
+      })
+    })
+  })
+</script>
 </html>
