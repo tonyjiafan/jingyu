@@ -6,7 +6,7 @@
   height: auto;
   margin: 0px auto 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .price-item{
@@ -15,7 +15,7 @@
   background: #fff;
   box-shadow: 0 0 17px #e8e8e8;
   border-radius: 8px 8px 4px 4px;
-  margin: 50px 0 50px;
+  margin: 50px 7px 50px;
   text-align: center;
   position: relative;
   transition: all .5s;

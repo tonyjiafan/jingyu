@@ -11,7 +11,7 @@
   margin: 0 auto 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .common-activity-list-item{
@@ -19,7 +19,7 @@
   height: 458px;
   background: #ffffff;
   box-shadow: 0 0 17px #e8e8e8;
-  margin-bottom: 50px;
+  margin: 0 7px 50px;
   transition: all 0.5s;
 }
 .common-activity-list-item:hover{
@@ -90,7 +90,7 @@
   margin: 10px;
 }
 /* 选中的btn样式 */
-.page-number-btn:first-child{
+.current{
   background: #54A7F5;
   color: #ffffff;
 }

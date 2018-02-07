@@ -20,7 +20,7 @@
   margin: 0 auto 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .common-activity-list-item{
@@ -28,7 +28,7 @@
   height: 458px;
   background: #ffffff;
   box-shadow: 0 0 17px #e8e8e8;
-  margin-bottom: 40px;
+  margin: 0 7px 40px;
 }
 .common-activity-list-item:hover{
   box-shadow: 0 4px 70px -18px #444;

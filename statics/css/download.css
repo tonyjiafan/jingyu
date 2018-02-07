@@ -6,7 +6,7 @@
   height: auto;
   margin: 0px auto 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .download-item{
@@ -15,7 +15,7 @@
   background: #fff;
   box-shadow: 0 0 17px #e8e8e8;
   border-radius: 4px;
-  margin: 50px 0 80px;
+  margin: 50px 20px 80px;
   text-align: center;
   position: relative;
   transition: all .5s;

@@ -140,7 +140,7 @@ body{
   z-index: 99;
   overflow: hidden;
   background: rgba(0,0,0,0.2);
-  /* display: none; */
+  display: none;
   transition: all .5s;
 }
 .login-module-box{
@@ -177,7 +177,6 @@ body{
   border-bottom: 1px solid #d5d5d5;
   position: relative;
   text-align: center;
-  /* background: yellow; */
 }
 .tab-bottom-border{
   display: block;
