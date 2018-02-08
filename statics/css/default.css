@@ -399,6 +399,12 @@ header{
   vertical-align: 2px;
   margin-right: 10px;
 }
+.plan-list a{
+  color: #999999;
+}
+.plan-list a:hover{
+  color: #999999;
+}
 .plan-list{
   transition: all 0.5s;
 }
@@ -467,6 +473,16 @@ header{
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 60px auto 70px;
+}
+.click-box{
+  display: block;
+  width: 100%;
+  height: auto;
+  /* outline: 1px solid red; */
+}
+.click-box:hover .use-title{
+  color: #333;
+  font-weight: 400;
 }
 .use-list-item{
   /* margin-bottom: 40px; */
