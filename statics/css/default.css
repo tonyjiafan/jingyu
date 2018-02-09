@@ -435,7 +435,7 @@ body{
   width: 730px;
   height: 440px;
   position: relative;
-  /* outline: 1px solid red; */
+  overflow: hidden;
 }
 .activity-plan-right .look-more{
   display: inline-block;
@@ -451,35 +451,19 @@ body{
   right: 0;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
+  background: #fff;
 }
 .plan-img{
-  position: absolute;
-  width: 200px;
-  height: 180px;
+  width: 730px;
+  height: 400px;
   border-radius: 1px;
   transition: all 1s;
 }
 .plan-img:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
-.plan-img-1{
-  width: 300px;
-  height: 180px;
-  top: 0px;
-  left: 0px;
-}
-.plan-img-2{
-  width: 220px;
-  height: 190px;
-  top: 50px;
-  right: 0px;
-}
-.plan-img-3{
-  width: 450px;
-  height: 300px;
-  top: 140px;
-  left: 120px;
-}
+
+
 
 /* middel-border-title */
 .middel-border-title{

@@ -28,7 +28,7 @@
   left: 50%;
   margin-left: -590px;
   box-shadow: 0 0 17px #999;
-  /* display: none; */
+  display: none;
 }
 .nav-two-warp ul li{
   list-style: none;

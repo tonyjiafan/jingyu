@@ -207,9 +207,7 @@
           </p>
         </div>
         <div class="activity-plan-right">
-          <img class="plan-img plan-img-1" src="./statics/images/plan-3.png" alt="">
-          <img class="plan-img plan-img-2" src="./statics/images/plan-3.png" alt="">
-          <img class="plan-img plan-img-3" src="./statics/images/plan-3.png" alt="">
+          <img class="plan-img" src="./statics/images/plan-3.png" alt="">
           <a class="look-more" url="./solution_index.html" href="#"> 查看更多 </a>
         </div>
       </div>
@@ -434,10 +432,11 @@
       var urlTage = $(element).attr('url')
       $('.look-more').attr('href', urlTage)
       var imgs = $('.plan-img')
-      Array.prototype.forEach.call(imgs, function (el, index) {
-        $(el).hide()
-        $(el).attr('src', `./statics/images/plan-${srcTage}.png`).fadeIn(200)
-      })
+      $(imgs).attr('src', `./statics/images/plan-${srcTage}.png`).fadeIn(200)
+      // Array.prototype.forEach.call(imgs, function (el, index) {
+      //   $(el).hide()
+      //   $(el).attr('src', `./statics/images/plan-${srcTage}.png`).fadeIn(200)
+      // })
     })
   })
 </script>
