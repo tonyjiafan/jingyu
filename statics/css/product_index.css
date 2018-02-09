@@ -13,7 +13,51 @@
   text-align: center;
   margin: 100px auto 50px;
 }
-
+.title-tag{
+  margin-bottom: 120px;
+}
+/* 锚点样式 */
+.nav-two-warp{
+  width: 1180px;
+  height: 60px;
+  margin: 0px auto 0px;
+  background: #fff;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  margin-left: -590px;
+  box-shadow: 0 0 17px #999;
+  /* display: none; */
+}
+.nav-two-warp ul li{
+  list-style: none;
+  float: left;
+  margin: 15px 10px 0px;
+  width: 90px;
+  height: 30px;
+}
+.maodian-a{
+  display: inline-block;
+  line-height: 30px;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #666;
+  font-weight: 300;
+}
+.maodian-a:hover{
+  border: 1px solid #6499fb;
+}
+.maodian-active{
+  background: #6499fb;
+  border: 1px solid #6499fb;
+  color: #ffffff;
+}
 .common-activity-list{
   width: 1200px;
   height: auto;
