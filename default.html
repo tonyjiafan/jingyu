@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="home-content">
-    <header>
+    <div class="header">
       <div class="home-head-warp">
         <div class="home-nav">
           <img class="logo" src="./statics/images/logo.png" alt="">
@@ -85,7 +85,7 @@
         <!-- 焦点 -->
         <div class="swiper-pagination"></div>
       </div>
-    </header>
+    </div>
 
     <!-- 中  内容区 -->
     <div class="home-middel-content">
@@ -177,37 +177,32 @@
       <!-- 活动解决方案 -->
       <div class="home-activity-plan">
         <div class="activity-plan-left">
-          <p><img src="./statics/images/list_title.png" alt="">大型活动解决方案</p>
-          <p class="plan-list" name="3" >
+          <p>
             <a href="#">
-            <img name="3" src="./statics/images/list_normal.png" alt="">会展活动解决方案
+              <img src="./statics/images/list_title.png" alt="">大型活动解决方案
             </a>
           </p>
-          <p class="plan-list" name="1" >
-            <a href="#">
-            <img name="1" src="./statics/images/list_normal.png" alt="">学术会议解决方案
-            </a>
+          <p class="plan-list" name="3"  url="./solution_index.html">
+            <img url="./solution_index.html" name="3" src="./statics/images/list_normal.png" alt="">会展活动解决方案
           </p>
-          <p class="plan-list" name="3" >
-            <a href="#">
-            <img name="3" src="./statics/images/list_normal.png" alt="">教育培训解决方案
-            </a>
+          <p class="plan-list" name="1"  url="./solution_index.html">
+            <img url="./solution_index.html" name="1" src="./statics/images/list_normal.png" alt="">学术会议解决方案
           </p>
-          <p class="plan-list" name="2" >
-            <a href="#">
-            <img name="2" src="./statics/images/list_normal.png" alt="">年会活动解决方案
-            </a>
+          <p class="plan-list" name="3"  url="./solution_index.html">
+            <img url="./solution_index.html" name="3" src="./statics/images/list_normal.png" alt="">教育培训解决方案
           </p>
-          <p class="plan-list" name="1" >
-            <a href="#">
-            <img name="1" src="./statics/images/list_normal.png" alt="">互联网活动解决方案
-            </a>
+          <p class="plan-list" name="2"  url="./solution_index.html">
+            <img url="./solution_index.html" name="2" src="./statics/images/list_normal.png" alt="">年会活动解决方案
+          </p>
+          <p class="plan-list" name="1"  url="./solution_index.html">
+            <img url="./solution_index.html" name="1" src="./statics/images/list_normal.png" alt="">互联网活动解决方案
           </p>
         </div>
         <div class="activity-plan-right">
           <img class="plan-img plan-img-1" src="./statics/images/plan-3.png" alt="">
           <img class="plan-img plan-img-2" src="./statics/images/plan-3.png" alt="">
           <img class="plan-img plan-img-3" src="./statics/images/plan-3.png" alt="">
+          <a class="look-more" url="./solution_index.html" href="#"> 查看更多 </a>
         </div>
       </div>
       <!--  -->
@@ -302,7 +297,7 @@
       <div class="pad-warp"></div>
     </div>
     <!-- footer -->
-    <footer>
+    <div class="footer">
       <div class="ft-list-warp">
         <div class="ft-list-item">
           <h3>产品介绍</h3>
@@ -347,7 +342,7 @@
       </div>
       <div class="footer-border"> </div>
       <p class="company-info">Copyright &copy; 开心大屏幕 四川开心科技有限公司 版权所有 蜀ICP备15000126号-1川公安网备 51010702000738</p>
-    </footer>
+    </div>
 
   </div>
 </body>
@@ -369,9 +364,9 @@
       var a = $(el).find('a')
       if ($(el).hasClass('roundabout-in-focus')) {
         $(item).show(1000)
-        $(a).show(1000).css({
+        $(a).css({
           lineheight: '92px'
-        })
+        }).show(1000)
       } else {
         $(item).hide()
         $(a).hide()
@@ -410,6 +405,8 @@
     // 列表切换图片
     $('.plan-list').on('click', function(e){
       var srcTage = $(e.target).attr('name')
+      var urlTage = $(e.target).attr('url')
+      $('.look-more').attr('href', urlTage)
       var imgs = $('.plan-img')
       Array.prototype.forEach.call(imgs, function (el, index) {
         $(el).hide()

@@ -126,7 +126,7 @@ body{
   width: 100%;
   margin: auto;
 }
-header{
+.header{
   width: 100%;
   height: 710px;
   display: flex;
@@ -395,16 +395,15 @@ header{
   margin: 0 0 70px;
   cursor: auto;
 }
+.activity-plan-left p:nth-child(1) a{
+  text-decoration: none;
+  color: #8289F1;
+}
 .activity-plan-left p:nth-child(1) img{
   vertical-align: 2px;
   margin-right: 10px;
 }
-.plan-list a{
-  color: #999999;
-}
-.plan-list a:hover{
-  color: #999999;
-}
+
 .plan-list{
   transition: all 0.5s;
 }
@@ -416,6 +415,22 @@ header{
   width: 730px;
   height: 440px;
   position: relative;
+  /* outline: 1px solid red; */
+}
+.activity-plan-right .look-more{
+  display: inline-block;
+  text-align: center;
+  width: 90px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  color: #999;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
 }
 .plan-img{
   position: absolute;
@@ -443,7 +458,7 @@ header{
   width: 450px;
   height: 300px;
   top: 140px;
-  left: 160px;
+  left: 120px;
 }
 
 /* middel-border-title */
@@ -478,18 +493,17 @@ header{
   display: block;
   width: 100%;
   height: auto;
-  /* outline: 1px solid red; */
 }
 .click-box:hover .use-title{
-  color: #333;
-  font-weight: 400;
+  color: #8289F1;
+  font-weight: 300;
 }
 .use-list-item{
   /* margin-bottom: 40px; */
 }
 .use-list-item .use-img{
   width: 380px;
-  height: 240px;
+  height: 214px;
   border-radius: 4px;
   background: url('../images/plan-3.png') no-repeat center;
   margin-bottom: 20px;
@@ -506,8 +520,8 @@ header{
 .use-motai{
   position: absolute;
   width: 380px;
-  height: 240px;
-  top: -240px;
+  height: 214px;
+  top: -214px;
   left: 0;
   background: rgba(0,0,0,0.6);
   color: #ffffff;
@@ -579,7 +593,7 @@ header{
 }
 
 /* footer */
-footer{
+.footer{
   width: 100%;
   height: 744px;
   background: url('../images/footor.png') no-repeat center;
