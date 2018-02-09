@@ -280,9 +280,31 @@ body{
 	/* overflow-x:hidden; */
 	position:relative;
 }
-.card-gla-inbox img{
+.card-gla-inbox .big-img{
 	width:100%;
 	height:100%;
+  /* opacity: .9; */
+}
+.card-gla-inbox .change-btn{
+  display: inline-block;
+  line-height: 58px;
+  text-align: center;
+	width: 58px;
+  height: 58px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  opacity: .7;
+}
+.change-prev{
+  left: 40px;
+  background: url('../images/prev.png') no-repeat center;
+  background-size: 80px 80px;
+}
+.change-next{
+  right: 40px;
+  background: url('../images/next.png') no-repeat center;
+  background-size: 80px 80px;
 }
 .card-gla-inbox .btn-img-warp{
   display: inline-block;
@@ -376,7 +398,7 @@ body{
   height: 440px;
   text-align: left;
 }
-.activity-plan-left p{
+.plan-list{
   color: #999999;
   font-size: 24px;
   font-weight: 300;
@@ -385,21 +407,19 @@ body{
   padding: 0;
   cursor: pointer;
 }
-.activity-plan-left p img{
+.text-img{
   vertical-align: -2px;
   margin-right: 10px;
 }
-.activity-plan-left p:nth-child(1){
+
+/* 选中的样式 */
+.current-p{
   color: #8289F1;
   font-size: 36px;
-  margin: 0 0 70px;
-  cursor: auto;
+  margin: 70px 0 70px;
+  cursor: pointer;
 }
-.activity-plan-left p:nth-child(1) a{
-  text-decoration: none;
-  color: #8289F1;
-}
-.activity-plan-left p:nth-child(1) img{
+.current-img{
   vertical-align: 2px;
   margin-right: 10px;
 }

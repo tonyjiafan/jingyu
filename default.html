@@ -98,8 +98,9 @@
           <ul>
             <li class="card-li-item" onClick="changeCard(this)">
               <div class="card-gla-inbox gla_inbox">
-                <a href="#" class="btn-img-warp btn-img-warp-1">进入查看详情</a>
-                <img src="./statics/images/huiyifuwu.png" />
+                <span class="change-btn change-next" style="display: none;"> </span>
+                <span class="change-btn change-prev" style="display: none;"> </span>
+                <img class="big-img" src="./statics/images/huiyifuwu.png" />
                 <div class="card-child-box" style="display: block;">
                   <h2>会前管理</h2>
                   <div class="item-span-warp">
@@ -109,12 +110,31 @@
                     <span>智能化管理方案</span>
                   </div>
                 </div>
+                <a href="#" class="btn-img-warp btn-img-warp-1">进入查看详情</a>
               </div>
             </li>
             <li class="card-li-item" onClick="changeCard(this)">
               <div class="card-gla-inbox gla_inbox">
+                <span class="change-btn change-next"> </span>
+                <span class="change-btn change-prev"> </span>
+                <img class="big-img" src="./statics/images/huiqianyingxiao.png" />
+                <div class="card-child-box" style="display: none;">
+                  <h2>会前管理</h2>
+                  <div class="item-span-warp">
+                    <span>智能化管理方案</span>
+                    <span>智能化管理方案</span>
+                    <span>智能化管理方案</span>
+                    <span>智能化管理方案</span>
+                  </div>
+                </div>
                 <a href="#" class="btn-img-warp btn-img-warp-2">进入查看详情</a>
-                <img src="./statics/images/huiqianyingxiao.png" />
+              </div>
+            </li>
+            <li class="card-li-item" onClick="changeCard(this)">
+              <div class="card-gla-inbox gla_inbox">
+                <span class="change-btn change-next"> </span>
+                <span class="change-btn change-prev"> </span>
+                <img class="big-img" src="./statics/images/huiyifuwu.png" />
                 <div class="card-child-box" style="display: none;">
                   <h2>会前管理</h2>
                   <div class="item-span-warp">
@@ -124,26 +144,14 @@
                     <span>智能化管理方案</span>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="card-li-item" onClick="changeCard(this)">
-              <div class="card-gla-inbox gla_inbox">
                 <a href="#" class="btn-img-warp btn-img-warp-3">进入查看详情</a>
-                <img src="./statics/images/huiyifuwu.png" />
-                <div class="card-child-box" style="display: none;">
-                  <h2>会前管理</h2>
-                  <div class="item-span-warp">
-                    <span>智能化管理方案</span>
-                    <span>智能化管理方案</span>
-                    <span>智能化管理方案</span>
-                    <span>智能化管理方案</span>
-                  </div>
-                </div>
               </div>
             </li>
             <li class="card-li-item" onClick="changeCard(this)">
               <div class="card-gla-inbox gla_inbox">
-                <img src="./statics/images/huiyizhixing.png" />
+                <span class="change-btn change-next"> </span>
+                <span class="change-btn change-prev"> </span>
+                <img class="big-img" src="./statics/images/huiyizhixing.png" />
                 <div class="card-child-box" style="display: none;">
                   <h2>会前管理</h2>
                   <div class="item-span-warp">
@@ -158,7 +166,9 @@
             </li>
             <li class="card-li-item" onClick="changeCard(this)">
               <div class="card-gla-inbox gla_inbox">
-                <img src="./statics/images/huizhongfuwu.png" />
+                <span class="change-btn change-next"> </span>
+                <span class="change-btn change-prev"> </span>
+                <img class="big-img" src="./statics/images/huizhongfuwu.png" />
                 <div class="card-child-box" style="display: none;">
                   <h2>会前管理</h2>
                   <div class="item-span-warp">
@@ -177,25 +187,23 @@
       <!-- 活动解决方案 -->
       <div class="home-activity-plan">
         <div class="activity-plan-left">
-          <p>
-            <a href="#">
-              <img src="./statics/images/list_title.png" alt="">大型活动解决方案
-            </a>
-          </p>
-          <p class="plan-list" name="3"  url="./solution_index.html">
-            <img url="./solution_index.html" name="3" src="./statics/images/list_normal.png" alt="">会展活动解决方案
+          <!-- <p class="current-p">
+            <img class="current-img" src="./statics/images/list_title.png" alt="">大型活动解决方案
+          </p> -->
+          <p class="plan-list current-p" name="3"  url="./solution_index.html">
+            <img class="text-img current-img" src="./statics/images/list_title.png" alt="">会展活动解决方案
           </p>
           <p class="plan-list" name="1"  url="./solution_index.html">
-            <img url="./solution_index.html" name="1" src="./statics/images/list_normal.png" alt="">学术会议解决方案
+            <img class="text-img" src="./statics/images/list_normal.png" alt="">学术会议解决方案
           </p>
           <p class="plan-list" name="3"  url="./solution_index.html">
-            <img url="./solution_index.html" name="3" src="./statics/images/list_normal.png" alt="">教育培训解决方案
+            <img class="text-img" src="./statics/images/list_normal.png" alt="">教育培训解决方案
           </p>
           <p class="plan-list" name="2"  url="./solution_index.html">
-            <img url="./solution_index.html" name="2" src="./statics/images/list_normal.png" alt="">年会活动解决方案
+            <img class="text-img" src="./statics/images/list_normal.png" alt="">年会活动解决方案
           </p>
           <p class="plan-list" name="1"  url="./solution_index.html">
-            <img url="./solution_index.html" name="1" src="./statics/images/list_normal.png" alt="">互联网活动解决方案
+            <img class="text-img" src="./statics/images/list_normal.png" alt="">互联网活动解决方案
           </p>
         </div>
         <div class="activity-plan-right">
@@ -359,6 +367,7 @@
     $(s).addClass('roundabout-in-focus')
     $(s).find('div .card-child-box').show(1000)
     $(s).find('a').show(1000)
+    $(s).find('.change-btn').hide()
     Array.prototype.forEach.call(elements, function (el, index) {
       var item = $(el).find('div .card-child-box')
       var a = $(el).find('a')
@@ -367,9 +376,11 @@
         $(a).css({
           lineheight: '92px'
         }).show(1000)
+        $(el).find('.change-btn').hide()
       } else {
         $(item).hide()
         $(a).hide()
+        $(el).find('.change-btn').show(1200)
       }
     })
   }
@@ -404,8 +415,23 @@
     });
     // 列表切换图片
     $('.plan-list').on('click', function(e){
-      var srcTage = $(e.target).attr('name')
-      var urlTage = $(e.target).attr('url')
+      var textImg = $('.plan-list'),
+          element = $(this),
+          oldSrc = './statics/images/list_normal.png',
+          newSrc = './statics/images/list_title.png';
+      $(element).addClass('current-p').siblings().removeClass('current-p')
+      // 左内容区
+      Array.prototype.forEach.call(textImg, function (el, index) {
+        var img = $(el).find('img')
+        if ($(el).hasClass('current-p')) {
+          $(img).attr('src', `${newSrc}`).addClass('current-img')
+        } else {
+          $(img).attr('src', `${oldSrc}`).removeClass('current-img')
+        }
+      })
+      // 右内容区
+      var srcTage = $(element).attr('name')
+      var urlTage = $(element).attr('url')
       $('.look-more').attr('href', urlTage)
       var imgs = $('.plan-img')
       Array.prototype.forEach.call(imgs, function (el, index) {
