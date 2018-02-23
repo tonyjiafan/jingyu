@@ -9,10 +9,7 @@
   width: 1200px;
   height: auto;
   margin: 0 auto 70px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  /* outline: 1px solid red; */
 }
 .common-activity-list-item{
   width: 386px;
@@ -21,6 +18,7 @@
   box-shadow: 0 0 17px #e8e8e8;
   margin: 0 7px 50px;
   transition: all 0.5s;
+  float: left;
 }
 .common-activity-list-item:hover{
   box-shadow: 0 4px 70px -18px #444;
