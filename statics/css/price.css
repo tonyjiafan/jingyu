@@ -5,9 +5,7 @@
   width: 1200px;
   height: auto;
   margin: 0px auto 50px;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  /* outline: 1px solid red; */
 }
 .price-item{
   width: 386px;
@@ -19,6 +17,7 @@
   text-align: center;
   position: relative;
   transition: all .5s;
+  float: left;
 }
 .price-item .color-border{
   display: inline-block;
