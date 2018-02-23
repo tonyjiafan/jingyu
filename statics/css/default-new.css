@@ -133,37 +133,36 @@ body{
 .header{
   width: 100%;
   height: 710px;
-  display: flex;
-  justify-content: center;
   background-size: cover;
   position: relative;
 }
 .home-head-warp{
   width: 100%;
   height: 90px;
-  position: relative;
+  position: absolute;
   background: rgba(0,0,0,0.01);
   z-index: 10;
 }
 .home-nav{
   width: 1200px;
   height: 90px;
+  top: 0;
+  left: 50%;
+  margin-left: -600px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 .logo{
   display: block;
-  position: relative;z-index: 2;
+  position: relative;
+  z-index: 2;
+  float: left;
+  margin-top: 15px;
 }
 .home-nav-warp{
   position: relative;
   z-index: 2;
   width: 800px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 40px 0 40px;
+  float: left;
 }
 .home-nav-item{
   display: block;
@@ -173,6 +172,8 @@ body{
   border-radius: 3px;
   position: relative;
   font-size: 14px;
+  float: left;
+  margin: 0 16px 0 16px;
 }
 .home-nav-item a{
   text-align: center;
@@ -201,13 +202,12 @@ body{
   display: none;
 }
 .home-nav-login{
-  display: block;
+  display: inline-block;
   z-index: 2;
   width: 68px;
   height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  margin: 28px 10px 0px;
 }
 .home-nav-login a{
   text-align: center;
@@ -394,13 +394,12 @@ body{
 .home-activity-plan{
   width: 1200px;
   margin: 70px auto;
-  display: flex;
-  justify-content: space-between;
 }
 .activity-plan-left{
   width: 330px;
   height: 440px;
   text-align: left;
+  float: left;
 }
 .plan-list{
   color: #999999;
@@ -440,6 +439,7 @@ body{
   height: 440px;
   position: relative;
   overflow: hidden;
+  float: right;
 }
 .activity-plan-right .look-more{
   display: inline-block;
@@ -492,10 +492,8 @@ body{
 /* use-list */
 .use-list{
   width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin: 60px auto 70px;
+  /* outline: 1px solid red; */
 }
 .click-box{
   display: block;
@@ -507,7 +505,8 @@ body{
   font-weight: 300;
 }
 .use-list-item{
-  /* margin-bottom: 40px; */
+  float: left;
+  margin: 0 10px;
 }
 .use-list-item .use-img{
   width: 380px;
@@ -568,22 +567,16 @@ body{
 /* cooperation-list */
 .cooperation-list{
   width: 100%;
-  height: 450px;
+  height: 350px;
   background: url('../images/hezuo_bg.png') no-repeat center;
   background-size: cover;
   margin: 60px auto 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 100px;
 }
 .cooperation-list .child-warp{
   width: 1200px;
   height: 250px;
   margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 .hezuo-logo-box{
   width: 224px;
@@ -593,6 +586,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  float: left;
+  margin: 8px;
 }
 .hezuo-logo-box img {
   max-width: 210px;
@@ -603,15 +598,12 @@ body{
 /* footer */
 .footer{
   width: 100%;
-  height: 744px;
+  height: 700px;
   background: url('../images/footor.png') no-repeat center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  flex-wrap: wrap;
   position: relative;
   z-index: 3;
+  padding-top: 44px;
 }
 .footer-border{
   height: 2px;
@@ -626,16 +618,20 @@ body{
   font-size: 14px;
   color: #ffffff;
   font-weight: 200;
-  margin-top: -30px;
+  margin-top: 30px;
 }
 .ft-list-warp{
   width: 1200px;
   height: auto;
   margin: 300px auto 50px;
-  display: flex;
-  justify-content: space-between;
+}
+.ft-list-item {
+  text-align: center;
+  float: left;
+  width: 200px;
 }
 .ft-list-warp h3{
+  text-align: left;
   color: #fff;
   font-size: 20px;
   font-weight: 200;
