@@ -5,7 +5,7 @@ html {
     -ms-text-size-adjust: 100%;
 }
 body{
-  font-family: "PingFang SC", "黑体", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
@@ -118,7 +118,6 @@ samp {
 .clear{
   clear: both;
 }
-
 
 /*
 * ================ 二级页面公共的css样式=========================
@@ -373,6 +372,7 @@ body{
   background: url('../images/login_footer.png') no-repeat center;
   background-size: 530px 115px;
 }
+
 .icon-warp{
   width: 280px;
   height: 48px;
@@ -414,10 +414,7 @@ body{
 /* header */
 .header{
   width: 100%;
-  height: 90
-  outline: 1px solid #444;
-  display: flex;
-  justify-content: center;
+  height: 90;
   background-size: cover;
   position: relative;
   background: url('../images/nei_banner.png') no-repeat center;
@@ -442,10 +439,11 @@ body{
 .user-box{
   width: 200px;
   height: 52px;
-  display: flex;
-  justify-content: center;
   position: relative;
   cursor: pointer;
+  float: left;
+  margin-top: 20px;
+  /* outline: 1px solid red; */
 }
 .user-heade{
   width: 50px;
@@ -453,12 +451,14 @@ body{
   border-radius: 50%;
   margin-right: 10px;
   border: 1px solid #fff;
+  float: left;
 }
 .user-name{
   height: 50px;
   line-height: 50px;
   font-size: 14px;
   color: #fff;
+  float: left;
 }
 .triangle-tag{
   display: block;
@@ -469,6 +469,7 @@ body{
   border-left: 10px solid transparent;
   margin: 20px 0 20px 30px;
   transition: all 0.5s;
+  float: left;
 }
 
 .user-settings-box{
@@ -499,41 +500,40 @@ body{
 }
 /* 用户头像样式  ==结束== */
 
-
 .home-nav{
   width: 1200px;
   height: 90px;
-  /* background: rgba(0,0,0,0.1); */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  margin: 0 auto;
 }
 .logo{
   display: block;
-  position: relative;z-index: 2;
+  position: relative;
+  z-index: 2;
+  float: left;
+  margin-top: 15px;
 }
 .home-nav-warp{
   position: relative;
   z-index: 2;
   width: 800px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 40px 0 40px;
+  float: left;
+  height: 90px;
+  /* outline: 1px solid yellow; */
 }
 .common-nav-item{
   display: block;
   color: #fff;
-  /* background: rgba(0,0,0,.2); */
   cursor: pointer;
   border-radius: 3px;
   position: relative;
   font-size: 14px;
+  float: left;
+  margin: 0 20px 0 20px;
 }
 .common-nav-item a{
   text-align: center;
   text-decoration: none;
   color: #fff;
-  /* outline: 1px solid red; */
   display: inline-block;
   height: 90px;
   line-height: 90px;
@@ -553,29 +553,29 @@ body{
   left: 0;
   display: none;
 }
+
 .home-nav-login{
-  display: block;
+  display: inline-block;
   z-index: 2;
   width: 68px;
   height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  text-align: center;
+  margin: 28px 10px 0px;
+  cursor: pointer;
 }
 .home-nav-login a{
   text-align: center;
-  position: relative;
   text-decoration: none;
   color: #fff;
-  /* outline: 1px solid red; */
-  display: inline-block;
   width: 68px;
   height: 32px;
   line-height: 32px;
   border-radius: 6px;
+  display: inline-block;
+  position: relative;
   overflow: hidden;
 }
+
 .white-box{
   height: 50px;
   width: 6px;
@@ -625,14 +625,11 @@ body{
 .footer{
   /* outline: 1px solid red; */
   width: 100%;
-  height: 744px;
+  height: 700px;
   background: url('../images/footor.png') no-repeat center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  flex-wrap: wrap;
   position: relative;
+  padding-top: 44px;
   z-index: 3;
 }
 .footer-border{
@@ -648,16 +645,21 @@ body{
   font-size: 14px;
   color: #ffffff;
   font-weight: 200;
-  margin-top: -30px;
+  margin-top: 0px;
 }
 .ft-list-warp{
   width: 1200px;
   height: auto;
   margin: 300px auto 50px;
-  display: flex;
-  justify-content: space-between;
 }
+.ft-list-item {
+  text-align: center;
+  float: left;
+  width: 200px;
+}
+
 .ft-list-warp h3{
+  text-align: left;
   color: #fff;
   font-size: 20px;
   font-weight: 200;
@@ -677,6 +679,7 @@ body{
 .ft-list-warp p a:hover{
   text-decoration: underline;
 }
+
 .last-ft-list-item {
   text-align: center;
 }
