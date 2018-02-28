@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11">
   <title>鲸鱼活动官网首页</title>
   <link rel="stylesheet" type="text/css" href="./statics/css/base/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="./statics/css/default.css">
@@ -24,11 +25,6 @@
                 <label class="border-bottom"></label>
               </a>
             </span>
-            <!-- <span class="home-nav-item">
-              <a href="./product_details.html">产品详情
-                <label class="border-bottom"></label>
-              </a>
-            </span> -->
             <span class="home-nav-item">
               <a href="./solution_index.html">解决方案
                 <label class="border-bottom"></label>
@@ -78,6 +74,15 @@
       <!-- 轮播 -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
+
+          <a class="swiper-slide" href="#">
+            <div class="swiper-slide" style="background-image: url('./statics/images/banner_2.png'); 
+              background-repeat: no-repeat; 
+              background-size: cover;
+              background-position: center;"
+              ></div>
+          </a>
+
           <a class="swiper-slide" href="#">
             <div class="swiper-slide" style="background: url('./statics/images/banner.png') no-repeat center;background-size: cover;"></div>
           </a>
@@ -98,8 +103,36 @@
       <!-- card -->
       <div class="middel-car-warp" id="gla">
         <div id="gla_box" class="card-box">
+          <script type="text/javascript">
+            var changeCard = function (s){
+            var elements = $('.card-li-item')
+            Array.prototype.forEach.call(elements, function (el, index) {
+              $(el).removeClass('roundabout-in-focus')
+            })
+            $(s).addClass('roundabout-in-focus')
+            $(s).find('div .card-child-box').show(1000)
+            $(s).find('a').show(1000)
+            $(s).find('.change-btn').hide()
+            Array.prototype.forEach.call(elements, function (el, index) {
+              var item = $(el).find('div .card-child-box')
+              var a = $(el).find('a')
+              if ($(el).hasClass('roundabout-in-focus')) {
+                $(item).show(1000)
+                $(a).css({
+                  lineheight: '92px'
+                }).show(1000)
+                $(el).find('.change-btn').hide()
+              } else {
+                $(item).hide()
+                $(a).hide()
+                $(el).find('.change-btn').show(1200)
+              }
+            })
+          }
+          </script>
+          <!--  -->
           <ul>
-            <li class="card-li-item" onClick="changeCard(this)">
+            <li class="card-li-item" onClick="changeCard(this)" >
               <div class="card-gla-inbox gla_inbox">
                 <span class="change-btn change-next" style="display: none;"> </span>
                 <span class="change-btn change-prev" style="display: none;"> </span>
@@ -116,7 +149,7 @@
                 <a href="#" class="btn-img-warp btn-img-warp-1">进入查看详情</a>
               </div>
             </li>
-            <li class="card-li-item" onClick="changeCard(this)">
+            <li class="card-li-item" onClick="changeCard(this)" >
               <div class="card-gla-inbox gla_inbox">
                 <span class="change-btn change-next"> </span>
                 <span class="change-btn change-prev"> </span>
@@ -150,7 +183,7 @@
                 <a href="#" class="btn-img-warp btn-img-warp-3">进入查看详情</a>
               </div>
             </li>
-            <li class="card-li-item" onClick="changeCard(this)">
+            <li class="card-li-item" onClick="changeCard(this)" >
               <div class="card-gla-inbox gla_inbox">
                 <span class="change-btn change-next"> </span>
                 <span class="change-btn change-prev"> </span>
@@ -167,7 +200,7 @@
                 <a href="#" class="btn-img-warp btn-img-warp-4">进入查看详情</a>
               </div>
             </li>
-            <li class="card-li-item" onClick="changeCard(this)">
+            <li class="card-li-item" onClick="changeCard(this)" >
               <div class="card-gla-inbox gla_inbox">
                 <span class="change-btn change-next"> </span>
                 <span class="change-btn change-prev"> </span>
@@ -193,7 +226,7 @@
           <p class="plan-list current-p" name="3"  url="./solution_index.html">
             <img class="text-img current-img" src="./statics/images/list_title.png" alt="">会展活动解决方案
           </p>
-          <p class="plan-list" name="1"  url="./solution_index.html">
+          <p class="plan-list" name="4"  url="./solution_index.html">
             <img class="text-img" src="./statics/images/list_normal.png" alt="">学术会议解决方案
           </p>
           <p class="plan-list" name="3"  url="./solution_index.html">
@@ -207,7 +240,7 @@
           </p>
         </div>
         <div class="activity-plan-right">
-          <img class="plan-img" src="./statics/images/plan-3.png" alt="">
+          <img class="plan-img" src="./statics/images/image_1.png" alt="">
           <a class="look-more" url="./solution_index.html" href="#"> 查看更多 </a>
         </div>
         <div class="clear"></div>
@@ -354,95 +387,67 @@
       <div class="footer-border"> </div>
       <p class="company-info">Copyright &copy; 开心大屏幕 四川开心科技有限公司 版权所有 蜀ICP备15000126号-1川公安网备 51010702000738</p>
     </div>
-
   </div>
-</body>
-<script type="text/javascript" src="./statics/js/base/swiper.min.js"></script>
-<script type="text/javascript" src="./statics/js/base/jquery.corner.js"></script>
-<script type="text/javascript" src="./statics/js/base/jquery.roundabout.js"></script>
-<script type="text/javascript" src="./statics/js/base/jquery.roundabout-shapes.js"></script>
-<script>
-  var changeCard = function (s){
-    var elements = $('.card-li-item')
-    Array.prototype.forEach.call(elements, function (el, index) {
-      $(el).removeClass('roundabout-in-focus')
-    })
-    $(s).addClass('roundabout-in-focus')
-    $(s).find('div .card-child-box').show(1000)
-    $(s).find('a').show(1000)
-    $(s).find('.change-btn').hide()
-    Array.prototype.forEach.call(elements, function (el, index) {
-      var item = $(el).find('div .card-child-box')
-      var a = $(el).find('a')
-      if ($(el).hasClass('roundabout-in-focus')) {
-        $(item).show(1000)
-        $(a).css({
-          lineheight: '92px'
-        }).show(1000)
-        $(el).find('.change-btn').hide()
-      } else {
-        $(item).hide()
-        $(a).hide()
-        $(el).find('.change-btn').show(1200)
-      }
-    })
-  }
-  $(function() {
-    if($('#gla')){
-  		$('.gla_inbox').corner('5px');
-  		$('#gla_box>ul').roundabout({
-  			minOpacity:1,
-  			btnNext: ".next",
-  			duration: 1000,
-  			reflect: true,
-  			btnPrev: '.prev',
-  			// autoplay: true,
-  			autoplayDuration: 5000,
-  			tilt: 0,
-  			shape: 'figure8'
-  		});
-  	}
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + '</span>';
-        },
-      },
-    });
-    // 列表切换图片
-    $('.plan-list').on('click', function(e){
-      var textImg = $('.plan-list'),
-          element = $(this),
-          oldSrc = './statics/images/list_normal.png',
-          newSrc = './statics/images/list_title.png';
-      $(element).addClass('current-p').siblings().removeClass('current-p')
-      // 左内容区
-      Array.prototype.forEach.call(textImg, function (el, index) {
-        var img = $(el).find('img')
-        if ($(el).hasClass('current-p')) {
-          $(img).attr('src', `${newSrc}`).addClass('current-img')
-        } else {
-          $(img).attr('src', `${oldSrc}`).removeClass('current-img')
+  <!--  -->
+    <script type="text/javascript" src="./statics/js/base/swiper.min.js"></script>
+    <script type="text/javascript" src="./statics/js/base/jquery.corner.js"></script>
+    <script type="text/javascript" src="./statics/js/base/jquery.roundabout.js"></script>
+    <script type="text/javascript" src="./statics/js/base/jquery.roundabout-shapes.js"></script>
+    <script>
+      $(function() {
+        if($('#gla')){
+          $('.gla_inbox').corner('5px');
+          $('#gla_box>ul').roundabout({
+            minOpacity:1,
+            btnNext: ".next",
+            duration: 1000,
+            reflect: true,
+            btnPrev: '.prev',
+            // autoplay: true,
+            autoplayDuration: 5000,
+            tilt: 0,
+            shape: 'figure8'
+          });
         }
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'fade',
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + '</span>';
+            },
+          },
+        });
+        // 列表切换图片
+        $('.plan-list').on('click', function(e){
+          var textImg = $('.plan-list'),
+              element = $(this),
+              oldSrc = './statics/images/list_normal.png',
+              newSrc = './statics/images/list_title.png';
+          $(element).addClass('current-p').siblings().removeClass('current-p')
+          // 左内容区
+          Array.prototype.forEach.call(textImg, function (el, index) {
+            var img = $(el).find('img')
+            if ($(el).hasClass('current-p')) {
+              $(img).attr('src', newSrc).addClass('current-img')
+            } else {
+              $(img).attr('src', oldSrc).removeClass('current-img')
+            }
+          })
+          // 右内容区
+          var srcTage = $(element).attr('name')
+          var urlTage = $(element).attr('url')
+          $('.look-more').attr('href', urlTage)
+          console.log('./statics/images/plan-' + srcTage + '.png')
+          var imgs = $('.plan-img')
+          $(imgs).attr('src', './statics/images/image_' + srcTage + '.png').fadeIn(200)
+        })
       })
-      // 右内容区
-      var srcTage = $(element).attr('name')
-      var urlTage = $(element).attr('url')
-      $('.look-more').attr('href', urlTage)
-      var imgs = $('.plan-img')
-      $(imgs).attr('src', `./statics/images/plan-${srcTage}.png`).fadeIn(200)
-      // Array.prototype.forEach.call(imgs, function (el, index) {
-      //   $(el).hide()
-      //   $(el).attr('src', `./statics/images/plan-${srcTage}.png`).fadeIn(200)
-      // })
-    })
-  })
-</script>
+    </script>
+  </body>
 </html>

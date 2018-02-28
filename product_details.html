@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11">
   <title>产品详情</title>
   <link rel="stylesheet" type="text/css" href="./statics/css/common.css">
   <link rel="stylesheet" type="text/css" href="./statics/css/product_details.css">
@@ -138,7 +139,7 @@
         <div class="common-activity-list-item">
           <a href="#" class="list-a-warp">
             <div class="title-img-warp">
-              <img class="title-img" src="./statics/images/plan-3.png" alt="">
+              <img class="title-img" src="./statics/images/image_3.png" alt="">
             </div>
             <h2 class="title-info">XXX 会议</h2>
             <p class="title-text">一段描述活动的文字</p>
@@ -147,7 +148,7 @@
         <div class="common-activity-list-item">
           <a href="#" class="list-a-warp">
             <div class="title-img-warp">
-              <img class="title-img" src="./statics/images/plan-3.png" alt="">
+              <img class="title-img" src="./statics/images/image_3.png" alt="">
             </div>
             <h2 class="title-info">XXX 会议</h2>
             <p class="title-text">一段描述活动的文字</p>
@@ -156,7 +157,7 @@
         <div class="common-activity-list-item">
           <a href="#" class="list-a-warp">
             <div class="title-img-warp">
-              <img class="title-img" src="./statics/images/plan-3.png" alt="">
+              <img class="title-img" src="./statics/images/image_3.png" alt="">
             </div>
             <h2 class="title-info">XXX 会议</h2>
             <p class="title-text">一段描述活动的文字</p>
@@ -165,7 +166,7 @@
         <div class="common-activity-list-item">
           <a href="#" class="list-a-warp">
             <div class="title-img-warp">
-              <img class="title-img" src="./statics/images/plan-3.png" alt="">
+              <img class="title-img" src="./statics/images/image_3.png" alt="">
             </div>
             <h2 class="title-info">XXX 会议</h2>
             <p class="title-text">一段描述活动的文字</p>
@@ -174,7 +175,7 @@
         <div class="common-activity-list-item">
           <a href="#" class="list-a-warp">
             <div class="title-img-warp">
-              <img class="title-img" src="./statics/images/plan-3.png" alt="">
+              <img class="title-img" src="./statics/images/image_3.png" alt="">
             </div>
             <h2 class="title-info">XXX 会议</h2>
             <p class="title-text">一段描述活动的文字</p>
@@ -245,25 +246,24 @@
       <div class="footer-border"> </div>
       <p class="company-info">Copyright &copy; 开心大屏幕 四川开心科技有限公司 版权所有 蜀ICP备15000126号-1川公安网备 51010702000738</p>
     </div>
-
   </div>
-</body>
-<script>
-$(function() {
-  $('.change-item-details').on('click', function(e) {
-    var left = $(e.target).attr('name')
-    var tag = $(e.target).attr('tag')
-    $(e.target).css({color: '#333'}).siblings().css({color: '#999'})
-    $('#tab-bottom-border-details').css({left: `${left}px`})
-    if (tag == '详细介绍') {
-      $('#tab-conten-details-1').show()
-      $('#tab-conten-details-2').hide()
-    } else if (tag == '使用帮助') {
-      $('#tab-conten-details-2').show()
-      $('#tab-conten-details-1').hide()
-    }
-  })
-})
-
-</script>
+  <!--  -->
+    <script>
+    $(function() {
+      $('.change-item-details').on('click', function(e) {
+        var left = $(e.target).attr('name')
+        var tag = $(e.target).attr('tag')
+        $(e.target).css({'color': '#333'}).siblings().css({color: '#999'})
+        $('#tab-bottom-border-details').css({'left': left + 'px'})
+        if (tag == '详细介绍') {
+          $('#tab-conten-details-1').show()
+          $('#tab-conten-details-2').hide()
+        } else if (tag == '使用帮助') {
+          $('#tab-conten-details-2').show()
+          $('#tab-conten-details-1').hide()
+        }
+      })
+    })
+    </script>
+  </body>
 </html>
