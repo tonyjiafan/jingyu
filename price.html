@@ -65,9 +65,11 @@
       </div>
     </div>
   </div>
-  
+
   <!--  -->
   <div class="home-content">
+    <div class="scroll_top">Top</div>
+    <!--  -->
     <div class="header">
       <div class="home-nav">
         <img class="logo" src="./statics/images/logo.png" alt="">
@@ -245,114 +247,126 @@
       <p class="company-info">Copyright &copy; 开心大屏幕 四川开心科技有限公司 版权所有 蜀ICP备15000126号-1川公安网备 51010702000738</p>
     </div>
   </div>
-  <!--  -->
-    <script>
-      $(function(){
-        // 打开
-        $('#login-btn').on('click', function() {
-          $('body').addClass('loging-body')
-          $('.login-box-motai').fadeIn(100)
-        })
-        // 关闭
-        $('.login-colse-btn').on('click', function() {
-          $('body').removeClass('loging-body')
-          $('.login-box-motai').hide()
-        })
-        // tabs 切换
-        $('.change-item').on('click', function(e) {
-          var left = $(e.target).attr('name')
-          var tag = $(e.target).attr('tag')
-          $(e.target).css({'color': '#333'}).siblings().css({color: '#999'})
-          $('#tab-bottom-border').css({'left': left + 'px'})
-          if (tag == '登录') {
-            $('#tab-conten-2').fadeIn(500)
-            $('#tab-conten-1').hide()
-          } else if (tag == '注册') {
-            $('#tab-conten-1').fadeIn(500)
-            $('#tab-conten-2').hide()
-          }
-          // 清空提示
-          $('.prompt-text-login').text('')
-          $('.prompt-text-register').text('')
-          userState.forEach(function(e, i) {
-            $(e.dom).removeClass('warnning-input')
-          })
-        })
-
-        // 密码显示切换
-        $('#pwd-state-img').data('flag', true).on('click', function() {
-          // console.log($('#input-password').attr('type'))
-          var inputVal = $('#input-password').val()
-          if (inputVal == '') return
-          if ($('#input-password').attr('type') == 'text') {
-            var inputEl = $('<input class="login-form-input password-input" name="username" id="input-password" type="password">')
-            $(inputEl).val(inputVal)
-            $('#input-password').remove()
-            $('#input-warp-box').append(inputEl)
-
-            $(this).attr('src', './statics/images/pwd_show.png')
-          } else {
-            var inputEl = $('<input class="login-form-input password-input" name="username" id="input-password" type="text">')
-            $(inputEl).val(inputVal)
-            $('#input-password').remove()
-            $('#input-warp-box').append(inputEl)
-
-            $(this).attr('src', './statics/images/pwd_hide.png')
-          }
-        })
-
-        // 登录 提交
-        var userState = [
-          {name: 'userName', valState: false, dom: '#input-username'},
-          {name: 'password', valState: false, dom: '#input-password'}
-        ]
-        $('#login-submit-btn').on('click', function() {
-          console.log('clcik')
-          var prompt = $('.prompt-text-login')
-          prompt.text('')
-          var userVal = $('#input-username').val(),
-              pwaVal = $('#input-password').val();
-          if(userVal == '' || pwaVal == ''){
-            prompt.text('账号或密码不能为空').css({
-              opacity: '1',
-              color: '#ff0900'
-            })
-          } else if (userVal == '123' && pwaVal == '123') {
-            prompt.text('登录成功').css({
-              opacity: '1',
-              color: '#68d96d'
-            })
-            userState[0].valState = userVal !== '123' ? false : true;
-            userState[1].valState = pwaVal !== '123' ? false : true;
-          } else {
-            prompt.text('你的账户或密码不正确').css({
-              opacity: '1',
-              color: '#ff0900'
-            })
-            userState[0].valState = userVal !== '123' ? false : true;
-            userState[1].valState = pwaVal !== '123' ? false : true;
-          }
-          // 最后验证的 dom 状态显示
-          userState.forEach(function(e, i) {
-            console.log(e.valState)
-            if (e.valState) {
-              $(e.dom).removeClass('warnning-input')
-            } else {
-              $(e.dom).addClass('warnning-input')
-            }
-          })
-        })
-
-        // 注册 提交
-        $('#register-submit-btn').on('click', function() {
-          var prompt = $('.prompt-text-register')
-          prompt.text('')
-          prompt.text('账号或密码不能为空').css({
-            opacity: '1',
-            color: '#ff0900'
-          })
-        })
+<!--  -->
+<script>
+  $(function(){
+    // 打开
+    $('#login-btn').on('click', function() {
+      $('body').addClass('loging-body')
+      $('.login-box-motai').fadeIn(100)
+    })
+    // 关闭
+    $('.login-colse-btn').on('click', function() {
+      $('body').removeClass('loging-body')
+      $('.login-box-motai').hide()
+    })
+    // tabs 切换
+    $('.change-item').on('click', function(e) {
+      var left = $(e.target).attr('name')
+      var tag = $(e.target).attr('tag')
+      $(e.target).css({'color': '#333'}).siblings().css({color: '#999'})
+      $('#tab-bottom-border').css({'left': left + 'px'})
+      if (tag == '登录') {
+        $('#tab-conten-2').fadeIn(500)
+        $('#tab-conten-1').hide()
+      } else if (tag == '注册') {
+        $('#tab-conten-1').fadeIn(500)
+        $('#tab-conten-2').hide()
+      }
+      // 清空提示
+      $('.prompt-text-login').text('')
+      $('.prompt-text-register').text('')
+      userState.forEach(function(e, i) {
+        $(e.dom).removeClass('warnning-input')
       })
-    </script>
-  </body>
+    })
+
+    // 密码显示切换
+    $('#pwd-state-img').data('flag', true).on('click', function() {
+      // console.log($('#input-password').attr('type'))
+      var inputVal = $('#input-password').val()
+      if (inputVal == '') return
+      if ($('#input-password').attr('type') == 'text') {
+        var inputEl = $('<input class="login-form-input password-input" name="username" id="input-password" type="password">')
+        $(inputEl).val(inputVal)
+        $('#input-password').remove()
+        $('#input-warp-box').append(inputEl)
+
+        $(this).attr('src', './statics/images/pwd_show.png')
+      } else {
+        var inputEl = $('<input class="login-form-input password-input" name="username" id="input-password" type="text">')
+        $(inputEl).val(inputVal)
+        $('#input-password').remove()
+        $('#input-warp-box').append(inputEl)
+
+        $(this).attr('src', './statics/images/pwd_hide.png')
+      }
+    })
+
+    // 登录 提交
+    var userState = [
+      {name: 'userName', valState: false, dom: '#input-username'},
+      {name: 'password', valState: false, dom: '#input-password'}
+    ]
+    $('#login-submit-btn').on('click', function() {
+      console.log('clcik')
+      var prompt = $('.prompt-text-login')
+      prompt.text('')
+      var userVal = $('#input-username').val(),
+          pwaVal = $('#input-password').val();
+      if(userVal == '' || pwaVal == ''){
+        prompt.text('账号或密码不能为空').css({
+          opacity: '1',
+          color: '#ff0900'
+        })
+      } else if (userVal == '123' && pwaVal == '123') {
+        prompt.text('登录成功').css({
+          opacity: '1',
+          color: '#68d96d'
+        })
+        userState[0].valState = userVal !== '123' ? false : true;
+        userState[1].valState = pwaVal !== '123' ? false : true;
+      } else {
+        prompt.text('你的账户或密码不正确').css({
+          opacity: '1',
+          color: '#ff0900'
+        })
+        userState[0].valState = userVal !== '123' ? false : true;
+        userState[1].valState = pwaVal !== '123' ? false : true;
+      }
+      // 最后验证的 dom 状态显示
+      userState.forEach(function(e, i) {
+        console.log(e.valState)
+        if (e.valState) {
+          $(e.dom).removeClass('warnning-input')
+        } else {
+          $(e.dom).addClass('warnning-input')
+        }
+      })
+    })
+
+    // 注册 提交
+    $('#register-submit-btn').on('click', function() {
+      var prompt = $('.prompt-text-register')
+      prompt.text('')
+      prompt.text('账号或密码不能为空').css({
+        opacity: '1',
+        color: '#ff0900'
+      })
+    })
+
+    // 锚点 入口显示隐藏
+    window.addEventListener('scroll', function(e){
+      var t = document.documentElement.scrollTop || document.body.scrollTop;
+      if(t >= 400){
+        $('.scroll_top').fadeIn(400)
+      } else {
+        $('.scroll_top').hide()
+      }
+    })
+    // 返回顶部
+    $('.scroll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 1000)})
+  })
+</script>
+</body>
 </html>

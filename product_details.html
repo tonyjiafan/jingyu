@@ -10,6 +10,8 @@
 </head>
 <body>
   <div class="home-content">
+    <div class="scroll_top">Top</div>
+    <!--  -->
     <div class="header">
       <div class="home-nav">
         <img class="logo" src="./statics/images/logo.png" alt="">
@@ -263,6 +265,18 @@
           $('#tab-conten-details-1').hide()
         }
       })
+
+      // 锚点 入口显示隐藏
+      window.addEventListener('scroll', function(e){
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        if(t >= 500){
+          $('.scroll_top').fadeIn(400)
+        } else {
+          $('.scroll_top').hide()
+        }
+      })
+      // 返回顶部
+      $('.scroll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 1000)})
     })
     </script>
   </body>

@@ -6,10 +6,12 @@
   <title>下载中心</title>
   <link rel="stylesheet" type="text/css" href="./statics/css/common.css">
   <link rel="stylesheet" type="text/css" href="./statics/css/download.css">
-  <!-- <script type="text/javascript" src="./statics/js/base/jquery-1.7.2.min.js"></script> -->
+  <script type="text/javascript" src="./statics/js/base/jquery-1.7.2.min.js"></script>
 </head>
 <body>
   <div class="home-content">
+    <div class="scroll_top">Top</div>
+    <!--  -->
     <div class="header">
       <div class="home-nav">
         <img class="logo" src="./statics/images/logo.png" alt="">
@@ -165,6 +167,19 @@
       <p class="company-info">Copyright &copy; 开心大屏幕 四川开心科技有限公司 版权所有 蜀ICP备15000126号-1川公安网备 51010702000738</p>
     </div>
   </div>
-  <!--  -->
+<!--  -->
+<script>
+  // 锚点 入口显示隐藏
+  window.addEventListener('scroll', function(e){
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+    if(t >= 300){
+      $('.scroll_top').fadeIn(400)
+    } else {
+      $('.scroll_top').hide()
+    }
+  })
+  // 返回顶部
+  $('.scroll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 1000)})
+</script>
 </body>
 </html>

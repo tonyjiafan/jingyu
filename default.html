@@ -10,6 +10,8 @@
 </head>
 <body>
   <div class="home-content">
+    <div class="scroll_top">Top</div>
+    <!--  -->
     <div class="header">
       <div class="home-head-warp">
         <div class="home-nav">
@@ -76,8 +78,8 @@
         <div class="swiper-wrapper">
 
           <a class="swiper-slide" href="#">
-            <div class="swiper-slide" style="background-image: url('./statics/images/banner_2.png'); 
-              background-repeat: no-repeat; 
+            <div class="swiper-slide" style="background-image: url('./statics/images/banner_2.png');
+              background-repeat: no-repeat;
               background-size: cover;
               background-position: center;"
               ></div>
@@ -388,66 +390,77 @@
       <p class="company-info">Copyright &copy; 开心大屏幕 四川开心科技有限公司 版权所有 蜀ICP备15000126号-1川公安网备 51010702000738</p>
     </div>
   </div>
-  <!--  -->
-    <script type="text/javascript" src="./statics/js/base/swiper.min.js"></script>
-    <script type="text/javascript" src="./statics/js/base/jquery.corner.js"></script>
-    <script type="text/javascript" src="./statics/js/base/jquery.roundabout.js"></script>
-    <script type="text/javascript" src="./statics/js/base/jquery.roundabout-shapes.js"></script>
-    <script>
-      $(function() {
-        if($('#gla')){
-          $('.gla_inbox').corner('5px');
-          $('#gla_box>ul').roundabout({
-            minOpacity:1,
-            btnNext: ".next",
-            duration: 1000,
-            reflect: true,
-            btnPrev: '.prev',
-            // autoplay: true,
-            autoplayDuration: 5000,
-            tilt: 0,
-            shape: 'figure8'
-          });
+<!--  -->
+<script type="text/javascript" src="./statics/js/base/swiper.min.js"></script>
+<script type="text/javascript" src="./statics/js/base/jquery.corner.js"></script>
+<script type="text/javascript" src="./statics/js/base/jquery.roundabout.js"></script>
+<script type="text/javascript" src="./statics/js/base/jquery.roundabout-shapes.js"></script>
+<script>
+  $(function() {
+    if($('#gla')){
+      $('.gla_inbox').corner('5px');
+      $('#gla_box>ul').roundabout({
+        minOpacity:1,
+        btnNext: ".next",
+        duration: 1000,
+        reflect: true,
+        btnPrev: '.prev',
+        // autoplay: true,
+        autoplayDuration: 5000,
+        tilt: 0,
+        shape: 'figure8'
+      });
+    }
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + '</span>';
+        },
+      },
+    });
+    // 列表切换图片
+    $('.plan-list').on('click', function(e){
+      var textImg = $('.plan-list'),
+          element = $(this),
+          oldSrc = './statics/images/list_normal.png',
+          newSrc = './statics/images/list_title.png';
+      $(element).addClass('current-p').siblings().removeClass('current-p')
+      // 左内容区
+      Array.prototype.forEach.call(textImg, function (el, index) {
+        var img = $(el).find('img')
+        if ($(el).hasClass('current-p')) {
+          $(img).attr('src', newSrc).addClass('current-img')
+        } else {
+          $(img).attr('src', oldSrc).removeClass('current-img')
         }
-        var swiper = new Swiper('.swiper-container', {
-          effect: 'fade',
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + '</span>';
-            },
-          },
-        });
-        // 列表切换图片
-        $('.plan-list').on('click', function(e){
-          var textImg = $('.plan-list'),
-              element = $(this),
-              oldSrc = './statics/images/list_normal.png',
-              newSrc = './statics/images/list_title.png';
-          $(element).addClass('current-p').siblings().removeClass('current-p')
-          // 左内容区
-          Array.prototype.forEach.call(textImg, function (el, index) {
-            var img = $(el).find('img')
-            if ($(el).hasClass('current-p')) {
-              $(img).attr('src', newSrc).addClass('current-img')
-            } else {
-              $(img).attr('src', oldSrc).removeClass('current-img')
-            }
-          })
-          // 右内容区
-          var srcTage = $(element).attr('name')
-          var urlTage = $(element).attr('url')
-          $('.look-more').attr('href', urlTage)
-          console.log('./statics/images/plan-' + srcTage + '.png')
-          var imgs = $('.plan-img')
-          $(imgs).attr('src', './statics/images/image_' + srcTage + '.png').fadeIn(200)
-        })
       })
-    </script>
-  </body>
+      // 右内容区
+      var srcTage = $(element).attr('name')
+      var urlTage = $(element).attr('url')
+      $('.look-more').attr('href', urlTage)
+      console.log('./statics/images/plan-' + srcTage + '.png')
+      var imgs = $('.plan-img')
+      $(imgs).attr('src', './statics/images/image_' + srcTage + '.png').fadeIn(200)
+    })
+    // 锚点 入口显示隐藏
+    window.addEventListener('scroll', function(e){
+      var t = document.documentElement.scrollTop || document.body.scrollTop;
+      if(t >= 600){
+        $('.scroll_top').fadeIn(400)
+      } else {
+        $('.scroll_top').hide()
+      }
+    })
+    // 返回顶部
+    $('.scroll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 1000)})
+  })
+</script>
+</body>
 </html>

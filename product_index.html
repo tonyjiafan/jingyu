@@ -10,6 +10,8 @@
 </head>
 <body>
   <div class="home-content">
+    <div class="scroll_top">Top</div>
+    <!--  -->
     <div class="header">
       <div class="home-nav">
         <img class="logo" src="./statics/images/logo.png" alt="">
@@ -93,10 +95,10 @@
     <!-- 锚点 -->
     <div class="nav-two-warp" id ="nav-two-warp">
       <ul>
-        <li><a class="maodian-a" href="#1F" name="1F">会前</a></li>
-        <li><a class="maodian-a" href="#2F" name="2F">会中</a></li>
-        <li><a class="maodian-a" href="#3F" name="3F">会后</a></li>
-        <li><a class="maodian-a" href="#4F" name="4F">会议执行</a></li>
+        <li><a class="maodian-a" href="javascript:void(0);" name="11">会前</a></li>
+        <li><a class="maodian-a" href="javascript:void(0);" name="22">会中</a></li>
+        <li><a class="maodian-a" href="javascript:void(0);" name="33">会后</a></li>
+        <li><a class="maodian-a" href="javascript:void(0);" name="44">会议执行</a></li>
         <div class="clear"></div>
       </ul>
     </div>
@@ -362,7 +364,7 @@
     </div>
 
   </div>
-</body>
+<!--  -->
 <script>
 $(function() {
   // 用户头像弹窗
@@ -404,14 +406,44 @@ $(function() {
       }
     })
   })
+  // 锚点 入口显示隐藏
   window.addEventListener('scroll', function(e){
     var t = document.documentElement.scrollTop || document.body.scrollTop;
-    if(t >= 710){
+    if(t >= 680){
       $('#nav-two-warp').fadeIn(400)
+      $('.scroll_top').fadeIn(400)
     } else {
       $('#nav-two-warp').hide()
+      $('.scroll_top').hide()
     }
+  })
+
+  // 返回顶部
+  $('.scroll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 1000)})
+
+  // 锚点动画
+  $('.maodian-a').click(function(e){
+    var name = $(e.target).attr('name');
+    var tag;
+    switch(name){
+      case '11':
+        tag = '#1F';
+      break;
+      case '22':
+        tag = '#2F';
+      break;
+      case '33':
+        tag = '#3F';
+      break;
+      case '44':
+        tag = '#4F';
+      break;
+      default:
+        console.log(tag)
+    }
+    $('html,body').animate({scrollTop:$(tag).offset().top}, 800)
   })
 })
 </script>
+</body>
 </html>
