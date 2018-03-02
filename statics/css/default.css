@@ -124,8 +124,8 @@ samp {
 body{
   width: 100%;
   background: #fff;
-  min-width: 1300px;
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  overflow-x: hidden;
 }
 
 /* 返回顶部 */
@@ -437,8 +437,8 @@ body{
 /* 选中的样式 */
 .current-p{
   color: #8289F1;
-  font-size: 36px;
-  margin: 70px 0 70px;
+  font-size: 30px;
+  margin: 30px 0 30px;
   cursor: pointer;
 }
 .current-img{
@@ -447,11 +447,11 @@ body{
 }
 
 .plan-list{
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
-.plan-list:hover{
+/* .plan-list:hover{
   transform: scale(1.05);
-}
+} */
 
 .activity-plan-right{
   width: 730px;
