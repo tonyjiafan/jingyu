@@ -28,9 +28,30 @@ audio,canvas,video {
 body,button,input,select,textarea {
     font:12px/1.5 Microsoft YaHei;
 }
+/* IE输入框 去掉眼睛和删除 */
+input::-ms-clear,input::-ms-reveal{
+  display: none;
+}
 input,select,textarea {
     font-size:100%;
 }
+/* placeholder 颜色 */
+input::-webkit-input-placeholder{
+            color:#c0c0c0;
+            font-weight: 300;
+        }
+        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+            color:#c0c0c0;
+            font-weight: 300;
+        }
+        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+            color:#c0c0c0;
+            font-weight: 300;
+        }
+        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+            color:#c0c0c0;
+            font-weight: 300;
+        }
 
 /* 去掉各Table  cell 的边距并让其边重合 */
 table {

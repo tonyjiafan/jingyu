@@ -9,11 +9,23 @@ input::-ms-clear,input::-ms-reveal{
 input,select,textarea {
     font-size:100%;
 }
-/* 清除浮动 */
-.clear{
-  clear: both;
+/* placeholder 颜色 */
+input::-webkit-input-placeholder{
+    color:#c0c0c0;
+    font-weight: 300;
 }
-
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#c0c0c0;
+    font-weight: 300;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#c0c0c0;
+    font-weight: 300;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#c0c0c0;
+    font-weight: 300;
+}
 html, body {
   height: 100%;
 }
@@ -22,6 +34,10 @@ body{
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
+/* 清除浮动 */
+.clear{
+  clear: both;
+}
 /* 美化checkbox和radio */
 @keyframes hover-color {
   from {
@@ -224,7 +240,8 @@ body{
 
 /* 登录框 */
 .login-box{
-  width: 400px;
+  overflow: hidden;
+  width: 360px;
   height: 424px;
   background: #fff;
   border-radius: 6px;
@@ -309,22 +326,24 @@ body{
   color: #fc5144;
   line-height: 36px;
 }
-.chexck-warp{
+.check-warp{
   width: 35%;
   float: left;
+  font-size: 14px;
 }
-.chexck-warp-2{
+.check-warp-2{
+  font-size: 14px;
   width: 40%;
   float: right;
   text-align: right;
 }
-.chexck-warp-2 a{
+.check-warp-2 a{
   color: #999999;
   text-decoration: none;
   font-size: 16px;
   font-weight: 300;
 }
-.chexck-warp-2 a:hover{
+.check-warp-2 a:hover{
   text-decoration: underline;
 }
 .check-text{
@@ -417,12 +436,38 @@ body{
 
 /* 注册部分样式 */
 .register-box{
-  width: 400px;
-  height: 459px;
+  overflow: hidden;
+  width: 360px;
+  height: 460px;
   background: #fff;
   border-radius: 6px;
   margin: 80px auto;
   padding-top: 40px;
   text-align: center;
   position: relative;
+}
+.register-from-input{
+  width: 280px;
+  height: 36px;
+  border: 1px solid #e8e8e8;
+  text-indent: 10px;
+  color: #666;
+  border-radius: 4px;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.register-check{
+  margin-top: -14px;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+}
+.register-check a{
+  color: #33A6F6;
+  text-decoration: none;
+}
+.register-check a:hover{
+  text-decoration: underline;
 }

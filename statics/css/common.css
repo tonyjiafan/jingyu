@@ -36,6 +36,23 @@ input,select,textarea {
 input::-ms-clear,input::-ms-reveal{
   display: none;
 }
+/* placeholder 颜色 */
+input::-webkit-input-placeholder{
+            color:#c0c0c0;
+            font-weight: 300;
+        }
+        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+            color:#c0c0c0;
+            font-weight: 300;
+        }
+        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+            color:#c0c0c0;
+            font-weight: 300;
+        }
+        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+            color:#c0c0c0;
+            font-weight: 300;
+        }
 
 /* 去掉各Table  cell 的边距并让其边重合 */
 table {
