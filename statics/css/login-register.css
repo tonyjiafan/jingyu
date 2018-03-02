@@ -31,7 +31,7 @@ html, body {
 }
 body{
   background: #ADCAE6;
-  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
 
 /* 清除浮动 */
@@ -340,7 +340,7 @@ body{
 .check-warp-2 a{
   color: #999999;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
 }
 .check-warp-2 a:hover{
@@ -348,7 +348,7 @@ body{
 }
 .check-text{
   color: #999999;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
 }
 .login-button{
@@ -462,12 +462,47 @@ body{
   margin-top: -14px;
   text-align: left;
   line-height: 20px;
-  font-size: 14px;
 }
-.register-check a{
+.contract-a{
   color: #33A6F6;
   text-decoration: none;
+  font-size: 14px;
 }
-.register-check a:hover{
+.contract-a:hover{
+  text-decoration: underline;
+}
+
+/* 获取验证码 */
+.register-code{
+  display: inline-block;
+  width: 100px;
+  height: 38px;
+  background-size: cover;
+  position: absolute;
+  right: -2px;
+  top: 0;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 38px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
+.code-btn{
+  display: none;
+  background: url('../images/code-normal.png') no-repeat center;
+}
+.code-time{
+  /* display: none; */
+  background: url('../images/code-select.png') no-repeat center;
+}
+.login-a{
+  color: #666;
+  font-size: 14px;
+  margin-left: 26px;
+  text-decoration: none;
+}
+.login-a:hover{
+  color: #444;
   text-decoration: underline;
 }
