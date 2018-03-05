@@ -101,8 +101,21 @@
     <!-- banner -->
     <div class="common-swiper-container"> </div>
 
+    <!-- 锚点 -->
+    <div class="nav-two-warp" id ="nav-two-warp">
+      <ul>
+        <li><a class="maodian-a" href="javascript:void(0);" name="11">抽奖类</a></li>
+        <li><a class="maodian-a" href="javascript:void(0);" name="22">互动类</a></li>
+        <li><a class="maodian-a" href="javascript:void(0);" name="33">签到类</a></li>
+        <li><a class="maodian-a" href="javascript:void(0);" name="44">3D功能</a></li>
+        <li><a class="maodian-a" href="javascript:void(0);" name="55">其它</a></li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+
     <!-- 中  内容区 -->
     <div class="common-middel-content">
+      <p class="title-tag" id="1F" name="1F"></p>
       <h1 class="common-middel-title-1" >抽奖类</h1>
       <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
       <ul class="common-items-warp">
@@ -132,7 +145,8 @@
             <p class="item-name">开心集卡片</p>
             <p class="item-price">￥ 400</p>
           </a>
-        </li><li>
+        </li>
+        <li>
           <a href="javascript:void(0);">
             <div class="font-warp">
               <img class="font-img" src="./statics/images/qq_select.png" alt="">
@@ -140,7 +154,8 @@
             <p class="item-name">开心集卡片</p>
             <p class="item-price">￥ 400</p>
           </a>
-        </li><li>
+        </li>
+        <li>
           <a href="javascript:void(0);">
             <div class="font-warp">
               <img class="font-img" src="./statics/images/qq_select.png" alt="">
@@ -153,7 +168,34 @@
         <div class="clear"></div>
       </ul>
 
+      <p class="title-tag" id="2F" name="2F"></p>
       <h1 class="common-middel-title-1" >互动类</h1>
+      <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
+      <ul class="common-items-warp">
+        <li>
+          <a href="javascript:void(0);">
+            <div class="font-warp">
+              <img class="font-img" src="./statics/images/qq_select.png" alt="">
+            </div>
+            <p class="item-name">开心集卡片</p>
+            <p class="item-price">￥ 400</p>
+          </a>
+        </li>
+        <li>
+          <a href="./login.html">
+            <div class="font-warp">
+              <img class="font-img" src="./statics/images/qq_select.png" alt="">
+            </div>
+            <p class="item-name">开心集卡片</p>
+            <p class="item-price">￥ 400</p>
+          </a>
+        </li>
+        <!--  -->
+        <div class="clear"></div>
+      </ul>
+
+      <p class="title-tag" id="3F" name="3F"></p>
+      <h1 class="common-middel-title-1" >签到类</h1>
       <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
       <ul class="common-items-warp">
         <li>
@@ -182,7 +224,16 @@
             <p class="item-name">开心集卡片</p>
             <p class="item-price">￥ 400</p>
           </a>
-        </li><li>
+        </li>
+        <!--  -->
+        <div class="clear"></div>
+      </ul>
+
+      <p class="title-tag" id="4F" name="4F"></p>
+      <h1 class="common-middel-title-1" >3D功能</h1>
+      <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
+      <ul class="common-items-warp">
+        <li>
           <a href="javascript:void(0);">
             <div class="font-warp">
               <img class="font-img" src="./statics/images/qq_select.png" alt="">
@@ -190,8 +241,35 @@
             <p class="item-name">开心集卡片</p>
             <p class="item-price">￥ 400</p>
           </a>
-        </li><li>
+        </li>
+        <li>
+          <a href="./login.html">
+            <div class="font-warp">
+              <img class="font-img" src="./statics/images/qq_select.png" alt="">
+            </div>
+            <p class="item-name">开心集卡片</p>
+            <p class="item-price">￥ 400</p>
+          </a>
+        </li>
+        <!--  -->
+        <div class="clear"></div>
+      </ul>
+
+      <p class="title-tag" id="5F" name="5F"></p>
+      <h1 class="common-middel-title-1" >其它</h1>
+      <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
+      <ul class="common-items-warp">
+        <li>
           <a href="javascript:void(0);">
+            <div class="font-warp">
+              <img class="font-img" src="./statics/images/qq_select.png" alt="">
+            </div>
+            <p class="item-name">开心集卡片</p>
+            <p class="item-price">￥ 400</p>
+          </a>
+        </li>
+        <li>
+          <a href="./login.html">
             <div class="font-warp">
               <img class="font-img" src="./statics/images/qq_select.png" alt="">
             </div>
@@ -297,18 +375,57 @@ $(function() {
     console.log($(e.target).text())
     location.href = 'product_details.html'
   })
+  // 锚点
+  $('.maodian-a').on('click', function(e) {
+    var tag = $(e.target).text();
+    var elements = $('.maodian-a');
+    Array.prototype.forEach.call(elements, function (el, index) {
+      if ($(el).text() == tag) {
+        $(el).addClass('maodian-active')
+      } else {
+        $(el).removeClass('maodian-active')
+      }
+    })
+  })
   // 锚点 入口显示隐藏
   window.addEventListener('scroll', function(e){
     var t = document.documentElement.scrollTop || document.body.scrollTop;
-    console.log(t)
-    if(t >= 100){
+    if(t >= 680){
+      $('#nav-two-warp').fadeIn(400)
       $('.scroll_top').fadeIn(400)
     } else {
+      $('#nav-two-warp').hide()
       $('.scroll_top').hide()
     }
   })
   // 返回顶部
   $('.scroll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 1000)})
+
+  // 锚点动画
+  $('.maodian-a').click(function(e){
+    var name = $(e.target).attr('name');
+    var tag;
+    switch(name){
+      case '11':
+        tag = '#1F';
+      break;
+      case '22':
+        tag = '#2F';
+      break;
+      case '33':
+        tag = '#3F';
+      break;
+      case '44':
+        tag = '#4F';
+      break;
+      case '55':
+        tag = '#5F';
+      break;
+      default:
+        console.log(tag)
+    }
+    $('html,body').animate({scrollTop:$(tag).offset().top}, 800)
+  })
 })
 </script>
 </body>
