@@ -7,7 +7,7 @@
 
 .common-activity-list{
   width: 1200px;
-  min-height: 800px;
+  height: auto;
   margin: 0 auto 70px;
   /* outline: 1px solid red; */
 }
@@ -49,7 +49,7 @@
 }
 .common-activity-list-item .title-info{
   text-align: left;
-  width: 365px;
+  width: 1160px;
   margin: 30px auto 10px;
   font-size: 24px;
   font-weight: 400;
@@ -57,7 +57,7 @@
 }
 .common-activity-list-item .title-text{
   text-align: left;
-  width: 365px;
+  width: 1160px;
   margin: 0px auto 30px;
   font-size: 18px;
   font-weight: 300;
