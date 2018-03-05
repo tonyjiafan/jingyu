@@ -218,7 +218,7 @@ body{
   position: relative;
 }
 .next-nav-box {
-  background: #e8e8e8;
+  background: #eeeeee;
   position: absolute;
   border-radius: 2px;
   width: 100px;
@@ -238,10 +238,11 @@ body{
   top: -10px;
   left: 20px;
 }
-.next-nav-box:hover .tag-i{
+.first-tag-nav:hover .tag-i{
   border-bottom: 10px solid #3d3535ed;
 }
 .next-nav-box li{
+  position: relative;
   list-style: none;
 }
 .next-nav-box li a{
@@ -255,7 +256,7 @@ body{
   padding: 0px 2px;
 }
 .next-nav-box li a:hover{
-  background: #3d3535ed;
+  background-color: #3d3535ed;
   color: #fff;
 }
 

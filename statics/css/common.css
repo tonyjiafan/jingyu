@@ -519,6 +519,7 @@ body{
   width: 100px;
   min-height: 96px;
   background: #fff;
+  border: 1px solid #eeeeee;
   border-radius: 4px;
   z-index: 10;
   bottom: -136px;
@@ -573,7 +574,7 @@ body{
   margin: 0 20px 0 20px;
 }
 .next-nav-box {
-  background: #e8e8e8;
+  background: #eeeeee;
   position: absolute;
   border-radius: 2px;
   width: 100px;
@@ -593,13 +594,13 @@ body{
   top: -10px;
   left: 20px;
 }
-
+.first-tag-nav:hover .tag-i{
+  border-bottom: 10px solid #3d3535ed;
+}
 .next-nav-box li{
   list-style: none;
 }
-.next-nav-box:hover .tag-i{
-  border-bottom: 10px solid #3d3535ed;
-}
+
 .next-nav-box li a{
   color: #444;
   width: 96px;
