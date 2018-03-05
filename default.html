@@ -88,21 +88,15 @@
       <!-- 轮播 -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-
-          <a class="swiper-slide" href="#">
-            <div class="swiper-slide" style="background-image: url('./statics/images/banner_2.png');
-              background-repeat: no-repeat;
-              background-size: cover;
-              background-position: center;"
-              ></div>
-          </a>
-
-          <a class="swiper-slide" href="#">
-            <div class="swiper-slide" style="background: url('./statics/images/banner.png') no-repeat center;background-size: cover;"></div>
-          </a>
-          <a class="swiper-slide" href="#">
-            <div class="swiper-slide" style="background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;"></div>
-          </a>
+          <div class="swiper-slide swiper-item" url="http://www.sina.cn"
+              style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
+          </div>
+          <div class="swiper-slide swiper-item" url="http://www.baidu.com"
+              style="cursor:pointer; background: url('./statics/images/banner.png') no-repeat center;background-size: cover;">
+          </div>
+          <div class="swiper-slide swiper-item" url="http://www.google.com"
+              style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
+          </div>
         </div>
         <!-- 焦点 -->
         <div class="swiper-pagination"></div>
@@ -437,6 +431,12 @@
         },
       },
     });
+    // 轮播图点击跳转事件
+    $('.swiper-item').on('click', function(e){
+      var url = $(e.target).attr('url')
+      window.location.href = url
+    })
+
     // 列表切换图片
     $('.plan-list').on('click', function(e){
       var textImg = $('.plan-list'),
