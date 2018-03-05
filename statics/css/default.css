@@ -216,6 +216,34 @@ body{
   float: left;
   margin: 0 20px 0 20px;
 }
+
+.next-nav-box {
+  background: #e8e8e8;
+  position: absolute;
+  border-radius: 2px;
+  width: 100px;
+  bottom: -80px;
+  left: 0px;
+  display: none;
+}
+.next-nav-box li{
+  list-style: none;
+}
+.next-nav-box li a{
+  color: #666;
+  width: 96px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  padding: 0px 2px;
+}
+.next-nav-box li a:hover{
+  background: #3884eb;
+  color: #fff;
+}
+
 .home-nav-item a{
   text-align: center;
   text-decoration: none;
@@ -227,6 +255,10 @@ body{
 }
 
 .home-nav-item:hover .border-bottom{
+  display: block;
+}
+/* 二级菜单 */
+.home-nav-item:hover .next-nav-box{
   display: block;
 }
 
