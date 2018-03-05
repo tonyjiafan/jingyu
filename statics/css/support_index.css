@@ -28,13 +28,13 @@
   list-style: none;
   float: left;
   margin: 15px 10px 0px;
-  width: 90px;
+  width: 120px;
   height: 30px;
 }
 .maodian-a{
   display: inline-block;
   line-height: 30px;
-  width: 90px;
+  width: 120px;
   height: 30px;
   text-align: center;
   font-size: 16px;
@@ -111,39 +111,4 @@
   font-size: 18px;
   font-weight: 300;
   color: #999999;
-}
-
-.setting-item{
-  text-align: center;
-  width: 184px;
-  margin: 0px 28px 30px;
-  cursor: pointer;
-  overflow: hidden;
-  float: left;
-}
-.setting-text{
-  font-size: 18px;
-  color: #444444;
-}
-.setting-item:hover .img-select-1{
-  opacity: 0;
-}
-.setting-item:hover .setting-text{
-  color: #8289F1;
-}
-.setting-item-warp{
-  width: 184px;
-  height: 184px;
-  position: relative;
-}
-.setting-item-warp img{
-  width: 184px;
-  height: 184px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.setting-item-warp .img-select-1{
-  z-index: 1;
-  transition: all .7s;
 }
