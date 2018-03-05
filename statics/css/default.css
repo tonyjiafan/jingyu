@@ -238,7 +238,9 @@ body{
   top: -10px;
   left: 20px;
 }
-
+.next-nav-box:hover .tag-i{
+  border-bottom: 10px solid #3d3535ed;
+}
 .next-nav-box li{
   list-style: none;
 }
