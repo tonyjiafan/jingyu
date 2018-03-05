@@ -164,7 +164,7 @@ body{
   text-align: center;
   line-height: 50px;
   cursor: pointer;
-  z-index: 5;
+  z-index: 7;
   display: none;
 }
 
@@ -215,8 +215,8 @@ body{
   font-size: 14px;
   float: left;
   margin: 0 20px 0 20px;
+  position: relative;
 }
-
 .next-nav-box {
   background: #e8e8e8;
   position: absolute;
@@ -226,11 +226,24 @@ body{
   left: 0px;
   display: none;
 }
+/* 三角形 */
+.tag-i{
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #e8e8e8;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
 .next-nav-box li{
   list-style: none;
 }
 .next-nav-box li a{
-  color: #666;
+  color: #444;
   width: 96px;
   text-align: center;
   text-decoration: none;
@@ -240,7 +253,7 @@ body{
   padding: 0px 2px;
 }
 .next-nav-box li a:hover{
-  background: #3884eb;
+  background: #3d3535ed;
   color: #fff;
 }
 
