@@ -193,8 +193,11 @@
           console.log(e.valState)
           if (e.valState) {
             $(e.dom).removeClass('warnning-input')
+            if (e.dom == '#c1') $('.register-check').removeClass('register-check-warning')
           } else {
             $(e.dom).addClass('warnning-input')
+            // 判断是不是用户协议未勾选
+            if (e.dom == '#c1') $('.register-check').addClass('register-check-warning')
             // $(warningDom).fadeIn(200)
             // waringText.text(e.waring)
           }

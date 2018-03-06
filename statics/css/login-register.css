@@ -464,6 +464,11 @@ body{
   margin-top: -14px;
   text-align: left;
   line-height: 20px;
+  padding: 2px 2px 4px;
+}
+.register-check-warning{
+  background: rgba(255,0,0,0.05);
+  outline: 1px solid #faccc6;
 }
 .contract-a{
   color: #33A6F6;
