@@ -88,15 +88,27 @@
       <!-- 轮播 -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide swiper-item" url="http://www.sina.cn"
+          <!-- <div class="swiper-slide" url="http://www.sina.cn"
               style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
           </div>
-          <div class="swiper-slide swiper-item" url="http://www.baidu.com"
+          <div class="swiper-slide" url="http://www.baidu.com"
               style="cursor:pointer; background: url('./statics/images/banner.png') no-repeat center;background-size: cover;">
           </div>
-          <div class="swiper-slide swiper-item" url="http://www.google.com"
+          <div class="swiper-slide" url="http://www.google.com"
               style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
-          </div>
+          </div> -->
+
+          <!-- 将 div 改成 a 标签 为ie兼容-->
+          <a href="http://www.sina.cn" class="swiper-slide"
+              style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
+          </a>
+          <a href="http://www.baidu.com" class="swiper-slide"
+              style="cursor:pointer; background: url('./statics/images/banner.png') no-repeat center;background-size: cover;">
+          </a>
+          <a href="http://www.google.com" class="swiper-slide"
+              style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
+          </a>
+
         </div>
         <!-- 焦点 -->
         <div class="swiper-pagination"></div>
@@ -434,11 +446,6 @@
         },
       },
     });
-    // 轮播图点击跳转事件
-    $('.swiper-item').on('click', function(e){
-      var url = $(e.target).attr('url')
-      window.location.href = url
-    })
 
     // 列表切换图片
     $('.plan-list').on('click', function(e){

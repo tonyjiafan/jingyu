@@ -30,7 +30,8 @@ html, body {
   height: 100%;
 }
 body{
-  background: #ADCAE6;
+  background: #c0dcfb;
+  overflow-x: hidden;
   font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
 
