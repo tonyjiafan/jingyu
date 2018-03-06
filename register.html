@@ -184,10 +184,10 @@
         var check = $('#c1').prop('checked')
         var checkedObj = {name: 'checked', valState: check, dom: '#c1'};
         registerStateObj = []
-        registerStateObj.push(phoneObj)
-        registerStateObj.push(codeObj)
-        registerStateObj.push(passwordObj)
-        registerStateObj.push(checkedObj)
+        registerStateObj.push(phoneObj,codeObj,passwordObj,checkedObj)
+        // registerStateObj.push(codeObj)
+        // registerStateObj.push(passwordObj)
+        // registerStateObj.push(checkedObj)
 
         registerStateObj.forEach(function(e, i) {
           console.log(e.valState)
@@ -198,8 +198,6 @@
             $(e.dom).addClass('warnning-input')
             // 判断是不是用户协议未勾选
             if (e.dom == '#c1') $('.register-check').addClass('register-check-warning')
-            // $(warningDom).fadeIn(200)
-            // waringText.text(e.waring)
           }
         })
         // 验证全部 必填项
