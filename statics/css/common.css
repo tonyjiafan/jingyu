@@ -778,7 +778,10 @@ body{
   text-align: center;
   font-size: 24px;
 }
-.last-ft-list-item p:nth-child(2) img{
+.last-ft-list-item .phone-text{
+  margin: 20px auto 10px;
+}
+.last-ft-list-item .phone-text img{
   vertical-align: -20px;
   margin: 10px auto;
   margin-right: 10px;
