@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11">
   <title>登录</title>
   <link rel="stylesheet" type="text/css" href="./statics/css/login-register.css">
-  <!-- <script type="text/javascript" src="./statics/js/base/jquery-1.7.2.min.js"></script> -->
+  <script type="text/javascript" src="./statics/js/base/jquery-1.7.2.min.js"></script>
 </head>
 
 <!--  -->
@@ -20,18 +20,18 @@
       <div class="login-content">
           <div class="login-box">
             <h3 class="box-title">登录</h3>
-            <div class="waring-box">
+            <div class="waring-box" id="waring-box">
               <p class="waring-icon"> - </p>
-              <span class="waring-text">请输入账户名和密码！</span>
+              <span class="waring-text" id="waring-text">请输入账户名和密码！</span>
             </div>
             <div class="content-box">
               <p>
                 <img class="icon-user icon" src="./statics/images/account.png" alt="">
-                <input class="user-input from-input" type="text" name="" value="">
+                <input class="user-input from-input" type="text" name="username" value="">
               </p>
               <p>
                 <img class="icon-password icon" src="./statics/images/password.png" alt="">
-                <input class="password-input from-input" type="password" name="" value="">
+                <input class="password-input from-input" type="password" name="password" value="">
               </p>
               <p style="line-height: 20px;">
                 <div class="check-warp">
@@ -45,7 +45,7 @@
               </p>
               <!-- button -->
               <div class="login-button" name="login-btn">
-                <span class="login-text" id="register-submit-btn">立即登录</span>
+                <span class="login-text" id="login-submit-btn">立即登录</span>
               </div>
               <!-- 注册 -->
               <p class="register-p">
@@ -74,6 +74,30 @@
         <p class="login-company-info">Copyright &copy; 开心大屏幕 四川开心科技有限公司 版权所有 蜀ICP备15000126号-1川公安网备 51010702000738</p>
       </div>
   </div>
-</body>
 
+  <!--  -->
+  <script>
+    $(function(){
+      var warningDom = $('#waring-box'),
+          waringText = $('#waring-text');
+      // 登录
+      $('#login-submit-btn').on('click', function() {
+        var username = $('input[name = username]').val(),
+            password = $('input[name = password]').val();
+        if (username === '' || password === '') {
+          $(warningDom).fadeIn(200)
+          $(waringText).text('请填写账号和密码！')
+        } else {
+          if (username == '222' && password == '222') {
+            $(warningDom).hide()
+            alert('登录成功')
+          } else {
+            $(warningDom).fadeIn(200)
+            $(waringText).text('账号或密码错误，请重新输入！')
+          }
+        }
+      })
+    })
+  </script>
+</body>
 </html>
