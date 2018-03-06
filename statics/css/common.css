@@ -561,6 +561,7 @@ body{
   width: 800px;
   float: left;
   height: 90px;
+  margin-left: 20px;
 }
 .common-nav-item{
   position: relative;
@@ -571,7 +572,7 @@ body{
   position: relative;
   font-size: 14px;
   float: left;
-  margin: 0 20px 0 20px;
+  margin: 0px 20px 0px;
 }
 .next-nav-box {
   background: #eeeeee;
