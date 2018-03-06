@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11">
   <title>注册</title>
   <link rel="stylesheet" type="text/css" href="./statics/css/login-register.css">
-  <!-- <script type="text/javascript" src="./statics/js/base/jquery-1.7.2.min.js"></script> -->
+  <script type="text/javascript" src="./statics/js/base/jquery-1.7.2.min.js"></script>
 </head>
 
 <!--  -->
@@ -20,34 +20,33 @@
       <div class="login-content">
           <div class="register-box">
             <h3 class="box-title">注册</h3>
-            <div class="waring-box">
+            <div class="waring-box" id="waring-box">
               <p class="waring-icon"> - </p>
-              <span class="waring-text">请填写完整的信息！</span>
+              <span class="waring-text" id="waring-text">请填写完整的信息！</span>
             </div>
             <div class="content-box">
               <p>
                 <span class="register-icon">*</span>
-                <span class="register-code code-btn">获取验证码</span>
-                <span class="register-code code-time">60</span>
-                <input class="user-input register-from-input" type="text" name="" value="" placeholder="请输入你的手机号">
+                <input class="register-code code-btn" type="button" id="code-btn" value="获取验证码" />
+                <input class="user-input register-from-input" type="text" name="phone" value="" placeholder="请输入你的手机号" id="phone-input">
               </p>
               <p>
                 <span class="register-icon">*</span>
-                <input class="password-input register-from-input" type="text" name="" value="" placeholder="请输入手机验证码">
+                <input class="password-input register-from-input" type="text" name="code" value="" placeholder="请输入手机验证码" id="code-input">
               </p>
               <p>
                 <span class="register-icon">*</span>
-                <input class="password-input register-from-input" type="password" name="" value="" placeholder="请输入6-8位包含字母数字的密码">
+                <input class="password-input register-from-input" type="text" name="password" value="" placeholder="请输入6-8位包含字母数字的密码" id="password-input">
               </p>
               <p>
-                <input class="password-input register-from-input" type="text" name="" value="" placeholder="请填写公司名称">
+                <input class="password-input register-from-input" type="text" name="" value="" placeholder="请填写公司名称" id="comony-input">
               </p>
               <p>
-                <input class="password-input register-from-input" type="text" name="" value="" placeholder="请输入联系人姓名">
+                <input class="password-input register-from-input" type="text" name="" value="" placeholder="请输入联系人姓名" id="person-input">
               </p>
               <!-- check -->
               <p class="register-check">
-                <input class="magic-checkbox" type="checkbox" name="layout" id="c1" checked>
+                <input class="magic-checkbox" type="checkbox" name="layout" id="c1" checked="checked">
                 <label class="check-text " for="c1">
                   同意
                   <a class="contract-a" href="#">《开心科技服务条款》</a>
@@ -69,6 +68,156 @@
         <p class="login-company-info">Copyright &copy; 开心大屏幕 四川开心科技有限公司 版权所有 蜀ICP备15000126号-1川公安网备 51010702000738</p>
       </div>
   </div>
-</body>
+  <!--  -->
+  <script>
+    $(function(){
+      // 全局变量
+      var warningDom = $('#waring-box'),
+          waringText = $('#waring-text'),
+          phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/,
+          codeReg = /^\d{4}$/,
+          pwdReg = new RegExp('^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,8}$'),
+          is_Submit = [];
 
+      // 验证码
+      var countdown = 60;
+      $('#code-btn').on('click', function() {
+        var phone = $('#phone-input').val()
+        var obj = $(this)
+        if (!phoneReg.test(phone)) {
+          $(warningDom).fadeIn(200)
+          waringText.text('请填写正确的手机号！')
+          $(this).addClass('warnning-input')
+        } else {
+          $(warningDom).hide()
+          waringText.text('')
+          $(this).removeClass('warnning-input')
+          settime(obj)
+        }
+      })
+      // 发送验证码倒计时
+      var settime = function(obj) {
+        if (countdown == 0) {
+          obj.attr('disabled', false)
+          obj.val('获取验证码')
+          obj.removeClass('code-time').addClass('code-btn')
+          countdown = 60;
+          return;
+        } else {
+          obj.attr('disabled', true)
+          obj.removeClass('code-btn').addClass('code-time')
+          obj.val("重新发送(" + countdown + ")")
+          countdown--;
+        }
+      setTimeout(function(){
+        settime(obj)
+        }, 1 * 1000)
+      }
+
+      // 注册提交
+      var registerStateObj = [],
+          phoneObj = {
+            name: 'phone',
+            valState: false,
+            dom: '#phone-input',
+            strNull: '手机号不能为空！',
+            waring: '请填写正确的手机号！'
+          },
+          codeObj = {
+            name: 'code',
+            valState: false,
+            dom: '#code-input',
+            strNull: '验证码不能为空！',
+            waring: '请填写正确的手机验证码！'
+          },
+          passwordObj = {
+            name: 'password',
+            valState: false,
+            dom: '#password-input',
+            strNull: '密码不能为空！',
+            waring: '请填写6-8位包含字母数字格式的密码！'
+          };
+      /* ======焦点验证======
+      *  regType : 正则
+      *  stateObj : 验证对象
+      */
+      function valueReg(regType, stateObj){
+        var valObj = $(stateObj.dom)
+        if (valObj == '') {
+          $(valObj).addClass('warnning-input')
+          $(warningDom).fadeIn(200)
+          waringText.text(stateObj.strNull)
+          stateObj.valState = false
+        } else if (!regType.test(valObj.val())){
+          $(valObj).addClass('warnning-input')
+          $(warningDom).fadeIn(200)
+          waringText.text(stateObj.waring)
+          stateObj.valState = false
+        } else {
+          $(warningDom).hide()
+          waringText.text('')
+          $(valObj).removeClass('warnning-input')
+          stateObj.valState = true
+        }
+      }
+
+      // 手机号
+      $('#phone-input').blur(function() {
+        valueReg(phoneReg, phoneObj)
+      })
+      // 手机验证码
+      $('#code-input').blur(function() {
+        if (phoneObj.valState) {
+          valueReg(codeReg, codeObj)
+        } else {
+          $(warningDom).fadeIn(200)
+          waringText.text('请先填写正确的手机号！')
+        }
+      })
+      // 密码
+      $('#password-input').blur(function() {
+        valueReg(pwdReg, passwordObj)
+      })
+
+      // 注册提交
+      $('#register-submit-btn').on('click', function() {
+        var check = $('#c1').prop('checked')
+        var checkedObj = {name: 'checked', valState: check, dom: '#c1'};
+        registerStateObj = []
+        registerStateObj.push(phoneObj)
+        registerStateObj.push(codeObj)
+        registerStateObj.push(passwordObj)
+        registerStateObj.push(checkedObj)
+
+        registerStateObj.forEach(function(e, i) {
+          console.log(e.valState)
+          if (e.valState) {
+            $(e.dom).removeClass('warnning-input')
+          } else {
+            $(e.dom).addClass('warnning-input')
+            // $(warningDom).fadeIn(200)
+            // waringText.text(e.waring)
+          }
+        })
+        // 验证全部 必填项
+        if (phoneObj.valState && codeObj.valState && passwordObj.valState && checkedObj.valState) {
+          $(warningDom).hide()
+          waringText.text('')
+          alert('注册成功')
+        } else {
+          $(warningDom).fadeIn(200)
+          waringText.text('请正确填写对应的信息！')
+        }
+
+      })
+    })
+
+
+
+
+
+
+
+  </script>
+</body>
 </html>

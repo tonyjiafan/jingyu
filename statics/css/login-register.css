@@ -279,7 +279,7 @@ body{
   color: #fff;
   text-align: center;
   line-height: 14px;
-  margin-right: 10px;
+  margin-right: 0px;
   margin-left: 10px;
 }
 .waring-text{
@@ -479,23 +479,23 @@ body{
   display: inline-block;
   width: 100px;
   height: 38px;
-  background-size: cover;
   position: absolute;
   right: -2px;
-  top: 0;
+  top: 0px;
   border-radius: 4px;
   text-align: center;
   line-height: 38px;
-  cursor: pointer;
   color: #fff;
   font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  /* box-shadow: 30px 30px 30px 30px #4dcaff inset; */
+  border: 1px solid transparent;
 }
 .code-btn{
-  display: none;
   background: url('../images/code-normal.png') no-repeat center;
 }
 .code-time{
-  /* display: none; */
   background: url('../images/code-select.png') no-repeat center;
 }
 .login-a{
@@ -507,4 +507,9 @@ body{
 .login-a:hover{
   color: #444;
   text-decoration: underline;
+}
+
+.warnning-input{
+  border: 1px solid #ff0000;
+  box-shadow: 40px 40px 40px 40px rgba(255,0,0,0.05) inset;
 }
