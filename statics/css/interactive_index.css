@@ -68,12 +68,11 @@
 }
 .common-items-warp{
   width: 1208px;
-  /* outline: 1px solid red; */
 }
 .common-items-warp li{
   list-style: none;
   width: 292px;
-  height: 292px;
+  height: 265px;
   border: 1px solid #e8e8e8;
   margin: 4px;
   float: left;
@@ -82,36 +81,52 @@
 .common-items-warp li a{
   display: inline-block;
   width: 292px;
-  height: 292px;
-  /* background: red; */
+  height: 265px;
+}
+.font-warp-box{
+  width: 292px;
+  height: 150px;
+  position: relative;
+  margin: 0px auto 40px;
+  background: rgba(0,0,0,0.02);
 }
 .font-warp{
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  margin: 20px auto;
-  background: rgba(0,0,0,0.07);
+  background: url('../images/plan-1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   overflow: hidden;
-  transition: all .2s;
+  transition: all .8s;
+  margin: 0 auto;
+  top: 35px;
+  z-index: -1;
 }
 .font-img{
   width: 80px;
   height: 80px;
   position: absolute;
-  bottom: -20px;
+  top: 50%;
   left: 50%;
+  margin-top: -40px;
   margin-left: -40px;
-  transition: all .4s;
+  transition: all 1.2s;
+  z-index: 4;
 }
 .common-items-warp li:hover .font-img{
-  bottom: 40px;
+  opacity: 0;
 }
 .common-items-warp li:hover .font-warp{
   border-radius: 0;
-  width: 100%;
-  height: 160px;
-  margin: 0 auto 40px;
+  width: 292px;
+  height: 150px;
+  border-radius: 0;
+  opacity: 1;
+  top: 0;
+  z-index: 2;
 }
 .item-name{
   text-align: center;
