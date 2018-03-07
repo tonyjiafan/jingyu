@@ -7,7 +7,7 @@
   position: fixed;
   z-index: 10;
   top: 0;
-  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 30px rgba(111, 109, 109, 0.1);
   display: none;
 }
 .nav-two-warp ul{

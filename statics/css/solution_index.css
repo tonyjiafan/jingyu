@@ -20,7 +20,7 @@
   transition: all 0.5s;
 }
 .common-activity-list-item:hover{
-  box-shadow: 0 4px 70px -18px #444;
+  box-shadow: 0 4px 50px -18px #4c4b4b;
 }
 .list-a-warp{
   display: block;

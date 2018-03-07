@@ -705,6 +705,7 @@ body{
   width: 1500px;
   margin: -20px auto 40px;
   border-bottom: 1px solid #fff;
+  opacity: .2;
 }
 .company-info{
   width: 1200px;
@@ -714,6 +715,7 @@ body{
   color: #ffffff;
   font-weight: 200;
   margin-top: 30px;
+  opacity: .6;
 }
 .ft-list-warp{
   width: 1200px;

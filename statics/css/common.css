@@ -518,12 +518,12 @@ body{
   width: 100px;
   min-height: 96px;
   background: #fff;
-  border: 1px solid #eeeeee;
   border-radius: 4px;
   z-index: 10;
-  bottom: -136px;
-  right: 0;
+  bottom: -145px;
+  right: 18px;
   padding: 20px 0 20px 20px;
+  box-shadow: 1px 3px 10px #dddbdb;
   transition: all 1s;
   display: none;
 }
@@ -728,6 +728,7 @@ body{
   width: 1500px;
   margin: -20px auto 40px;
   border-bottom: 1px solid #fff;
+  opacity: .2;
 }
 .company-info{
   width: 1200px;
@@ -737,6 +738,7 @@ body{
   color: #ffffff;
   font-weight: 200;
   margin-top: 0px;
+  opacity: .6;
 }
 .ft-list-warp{
   width: 1200px;

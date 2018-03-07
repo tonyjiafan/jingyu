@@ -20,7 +20,7 @@
   float: left;
 }
 .download-item:hover{
-  box-shadow: 0 4px 70px -18px #444;
+  box-shadow: 0 4px 50px -18px #4c4b4b;
 }
 .download-item .title{
   font-size: 24px;
