@@ -505,9 +505,9 @@ body{
   display: block;
   width: 0;
   height: 0;
-  border-right: 10px solid transparent;
+  border-right: 8px solid transparent;
   border-bottom: 10px solid #ffffff;
-  border-left: 10px solid transparent;
+  border-left: 8px solid transparent;
   margin: 20px 0 20px 30px;
   transition: all 0.5s;
   float: left;
@@ -516,13 +516,13 @@ body{
 .user-settings-box{
   position: absolute;
   width: 100px;
-  min-height: 96px;
+  /* min-height: 96px; */
   background: #fff;
   border-radius: 4px;
   z-index: 10;
-  bottom: -145px;
+  bottom: -105px;
   right: 18px;
-  padding: 20px 0 20px 20px;
+  padding: 20px 10px 0px;
   box-shadow: 1px 3px 10px #dddbdb;
   transition: all 1s;
   display: none;
@@ -530,7 +530,7 @@ body{
 .user-item-text{
   font-size: 14px;
   color: #333333;
-  margin: 10px 0;
+  margin: 0px 0px 20px;
   cursor: pointer;
 }
 .user-item-text:hover{
