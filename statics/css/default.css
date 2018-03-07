@@ -327,10 +327,10 @@ body{
   left: 90px;
 }
 .login{
-  background: url('../images/login.png') no-repeat center;
+  background: url('../images/zhuce.png') no-repeat center;
 }
 .zhuce{
-  background: url('../images/zhuce.png') no-repeat center;
+  background: url('../images/login.png') no-repeat center;
 }
 
 /* home-middel-content */
