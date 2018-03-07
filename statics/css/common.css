@@ -662,13 +662,14 @@ body{
   margin: 0px 20px 0px;
 }
 .next-nav-box {
-  background: #eeeeee;
+  background: #fff;
   position: absolute;
   border-radius: 2px;
-  width: 100px;
-  bottom: -80px;
-  left: 0px;
+  width: 84px;
+  bottom: -70px;
+  left: -12px;
   display: none;
+  box-shadow: 1px 3px 10px #dddbdb;
 }
 /* 三角形 */
 .tag-i{
@@ -686,22 +687,23 @@ body{
   border-bottom: 10px solid #3d3535ed;
 }
 .next-nav-box li{
+  position: relative;
   list-style: none;
 }
 
 .next-nav-box li a{
   color: #444;
-  width: 96px;
+  width: 80px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  height: 45px;
-  line-height: 45px;
+  height: 40px;
+  line-height: 40px;
   padding: 0px 2px;
 }
 .next-nav-box li a:hover{
-  background: #3d3535ed;
-  color: #fff;
+  font-weight: 400;
+  color: #58a3ff;
 }
 
 .common-nav-item a{

@@ -219,13 +219,14 @@ body{
   position: relative;
 }
 .next-nav-box {
-  background: #eeeeee;
+  background: #fff;
   position: absolute;
   border-radius: 2px;
   width: 84px;
   bottom: -70px;
   left: -12px;
   display: none;
+  box-shadow: 1px 3px 10px #dddbdb;
 }
 /* 三角形 */
 .tag-i{
@@ -257,8 +258,8 @@ body{
   padding: 0px 2px;
 }
 .next-nav-box li a:hover{
-  background-color: #3d3535ed;
-  color: #fff;
+  font-weight: 400;
+  color: #58a3ff;
 }
 
 .home-nav-item a{
