@@ -164,7 +164,7 @@ body{
   text-align: center;
   line-height: 50px;
   cursor: pointer;
-  z-index: 7;
+  z-index: 8;
   display: none;
 }
 
@@ -222,9 +222,9 @@ body{
   background: #eeeeee;
   position: absolute;
   border-radius: 2px;
-  width: 100px;
-  bottom: -80px;
-  left: 0px;
+  width: 84px;
+  bottom: -70px;
+  left: -12px;
   display: none;
 }
 /* 三角形 */
@@ -248,12 +248,12 @@ body{
 }
 .next-nav-box li a{
   color: #444;
-  width: 96px;
+  width: 80px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  height: 45px;
-  line-height: 45px;
+  height: 40px;
+  line-height: 40px;
   padding: 0px 2px;
 }
 .next-nav-box li a:hover{
@@ -770,7 +770,7 @@ body{
   width: 100%;
   margin: auto;
   position: relative;
-  z-index: 4;
+  z-index: 7;
 }
 .mian-fei-ti-yan .btn{
   position: relative;
@@ -779,17 +779,21 @@ body{
   display: block;
   background: url('../images/lijitiyan_btn.png') no-repeat center;
   background-size: cover;
-  text-decoration: none;
-  color: #fff;
 }
-.mian-fei-ti-yan .btn span{
+.mian-fei-ti-yan .btn .tiyan{
   position: absolute;
   color: #ffffff;
   font-size: 24px;
   font-weight: 300;
-  top: 40px;
-  left: 110px;
+  top: 30px;
+  left: 40px;
   z-index: 2;
+  width: 240px;
+  height: 56px;
+  border: 1px solid transparent;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 56px;
 }
 .mian-fei-btn-warp{
   width: 1200px;
