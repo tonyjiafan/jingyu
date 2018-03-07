@@ -12,12 +12,13 @@
   /* outline: 1px solid red; */
 }
 .common-activity-list-item{
-  width: 1200px;
-  height: 450px;
+  width: 386px;
+  height: 330px;
   background: #ffffff;
   box-shadow: 0 0 17px #e8e8e8;
-  margin: 0 auto 50px;
+  margin: 0 7px 50px;
   transition: all 0.5s;
+  float: left;
 }
 .common-activity-list-item:hover{
   box-shadow: 0 4px 50px -18px #4c4b4b;
@@ -25,28 +26,33 @@
 .list-a-warp{
   display: block;
   width: 100%;
-  height: 450px;
+  height: 350px;
 }
 .title-img-warp{
-  width: 1200px;
-  height: 300px;
+  width: 386px;
+  height: 205px;
   display: block;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-}
-.common-activity-list-item .title-img{
-  width: 1200px;
-  height: 300px;
-  display: block;
-  margin: auto;
-  transition: all 0.6s;
+  margin-top: -10px;
 }
 .title-img-warp:hover .title-img{
   transform: scale(1.1);
 }
+.common-activity-list-item .title-img{
+  width: 386px;
+  height: 205px;
+  display: block;
+  margin: auto;
+  transition: all 0.6s;
 
+}
 .common-activity-list-item .title-info{
   text-align: left;
-  width: 1160px;
+  width: 365px;
   margin: 30px auto 10px;
   font-size: 24px;
   font-weight: 400;
@@ -54,7 +60,7 @@
 }
 .common-activity-list-item .title-text{
   text-align: left;
-  width: 1160px;
+  width: 365px;
   margin: 0px auto 30px;
   font-size: 18px;
   font-weight: 300;
