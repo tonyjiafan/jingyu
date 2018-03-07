@@ -358,7 +358,16 @@ body{
   margin-top: 0px;
   width: 280px;
   height: 104px;
+  background-repeat: no-repeat;
+  transition: all .5s;
+}
+.state-bg-1{
   background: url('../images/login_btn_disable.png') no-repeat center;
+  background-size: 280px 104px;
+  opacity: .8;
+}
+.state-bg-2{
+  background: url('../images/login_btn_select.png') no-repeat center;
   background-size: 280px 104px;
 }
 .login-text{
@@ -375,7 +384,9 @@ body{
   font-size: 18px;
   font-weight: 300;
   cursor: pointer;
-  /* opacity: .5; */
+  background: rgba(0,0,0,0);
+  outline: none;
+  border: 1px solid transparent;
 }
 
 .register-p{
@@ -465,6 +476,16 @@ body{
   text-align: left;
   line-height: 20px;
   padding: 2px 2px 4px;
+}
+.pwd-state-img{
+  width: 20px;
+  height: 14px;
+  padding: 10px 5px;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  cursor: pointer;
+  transition: all .5s;
 }
 .register-check-warning{
   background: rgba(255,0,0,0.05);

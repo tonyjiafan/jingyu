@@ -36,7 +36,8 @@
               </p>
               <p>
                 <span class="register-icon">*</span>
-                <input class="password-input register-from-input" type="text" name="password" value="" placeholder="请输入6-8位包含字母数字的密码" id="password-input">
+                <img class="pwd-state-img invisible" id="pwd-state-img" src="./statics/images/pwd_show.png" alt="">
+                <input class="password-input register-from-input" type="password" name="password" value="" placeholder="请输入6-8位包含字母数字的密码" id="password-input">
               </p>
               <p>
                 <input class="password-input register-from-input" type="text" name="" value="" placeholder="请填写公司名称" id="comony-input">
@@ -54,8 +55,8 @@
                 </label>
               </p>
               <!-- button -->
-              <div class="login-button" name="login-btn">
-                <span class="login-text" id="register-submit-btn">注册</span>
+              <div class="login-button state-bg-2" name="login-btn">
+                <input class="login-text" type="button" id="register-submit-btn" name="" value="注册">
               </div>
             </div>
           </div>
@@ -76,8 +77,8 @@
           waringText = $('#waring-text'),
           phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/,
           codeReg = /^\d{4}$/,
-          pwdReg = new RegExp('^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,8}$'),
-          is_Submit = [];
+          pwdReg = new RegExp('^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,8}$');
+
       // 注册提交 全局变量
       var registerStateObj = [],
           phoneObj = {
@@ -176,6 +177,33 @@
         valueReg(pwdReg, passwordObj)
       })
 
+      // 密码显示切换
+      $('#pwd-state-img').off('click').on('click', function() {
+        console.log('ertyui')
+        var inputEl = $('#password-input')
+        if (inputEl.val() == '') return
+        if($(this).hasClass('invisible')){
+           $(this).removeClass('invisible').addClass('visible') //密码可见
+           inputEl.prop('type','text')
+           $(this).attr('src', './statics/images/pwd_hide.png')
+         }else{
+           $(this).removeClass('visible').addClass('invisible') //密码不可见
+           inputEl.prop('type','password')
+           $(this).attr('src', './statics/images/pwd_show.png')
+         }
+      })
+
+      // checkbox 事件
+      $('#c1').change(function() {
+        if ($(this).prop('checked')) {
+          $('#register-submit-btn').prop('disabled', false)
+          $('.login-button').addClass('state-bg-2').removeClass('state-bg-1')
+        } else {
+          $('#register-submit-btn').prop('disabled', true)
+          $('.login-button').addClass('state-bg-1').removeClass('state-bg-2')
+        }
+      })
+
       // 注册提交
       $('#register-submit-btn').on('click', function() {
         var check = $('#c1').prop('checked')
@@ -183,21 +211,17 @@
         registerStateObj = []
         registerStateObj.push(phoneObj,codeObj,passwordObj,checkedObj)
         registerStateObj.forEach(function(e, i) {
-          console.log(e.valState)
           if (e.valState) {
             $(e.dom).removeClass('warnning-input')
-            if (e.dom == '#c1') $('.register-check').removeClass('register-check-warning')
           } else {
             $(e.dom).addClass('warnning-input')
-            // 判断是不是用户协议未勾选
-            if (e.dom == '#c1') $('.register-check').addClass('register-check-warning')
           }
         })
         // 验证全部 必填项
         if (phoneObj.valState && codeObj.valState && passwordObj.valState && checkedObj.valState) {
           $(warningDom).hide()
           waringText.text('')
-          alert('注册成功')
+          location.href = './default.html'
         } else {
           $(warningDom).fadeIn(200)
           waringText.text('请正确填写对应的信息！')
