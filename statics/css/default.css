@@ -500,13 +500,13 @@ body{
 }
 .activity-plan-left{
   width: 330px;
-  height: 440px;
+  height: 316px;
   text-align: left;
   float: left;
 }
 .plan-list{
   color: #999999;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 300;
   white-space: nowrap;
   margin: 20px auto 0;
@@ -534,36 +534,54 @@ body{
 }
 
 .activity-plan-right{
-  width: 730px;
-  height: 440px;
+  width: 720px;
+  height: 316px;
   position: relative;
   overflow: hidden;
   float: right;
+}
+.look-more-img{
+  /* outline: 1px solid red; */
 }
 .activity-plan-right .look-more{
   display: inline-block;
   text-align: center;
   width: 90px;
-  height: 25px;
-  line-height: 25px;
+  height: 30px;
+  line-height: 30px;
   font-size: 14px;
   color: #999;
   text-decoration: none;
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 280px;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
   background: #fff;
 }
-.plan-img{
-  width: 730px;
-  height: 400px;
+.plan-img-1{
+  width: 440px;
+  height: 256px;
   border-radius: 1px;
   transition: all 1s;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  z-index: 2;
 }
-.plan-img:hover{
+.plan-img-2{
+  width: 300px;
+  height: 198px;
+  border-radius: 1px;
+  transition: all 1s;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  z-index: 1;
+}
+.plan-imgs:hover{
   transform: scale(1.05);
+  /* z-index: 2; */
 }
 
 /* middel-border-title */
