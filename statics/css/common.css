@@ -303,7 +303,7 @@ body{
   height: 100vh;
   z-index: 99;
   overflow: hidden;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.5);
   display: none;
   transition: all .5s;
 }
