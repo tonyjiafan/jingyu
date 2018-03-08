@@ -161,7 +161,6 @@
   width: 184px;
   height: 184px;
   position: relative;
-  /* outline: 1px solid red; */
 }
 .setting-item-warp img{
   transition: all .7s;
