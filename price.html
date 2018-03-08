@@ -10,57 +10,56 @@
 </head>
 <body class="" style="position: relative;">
   <!-- 登录弹窗 -->
-  <div class="login-box-motai">
-    <div class="login-module-box">
-      <!-- 登录内容区 -->
-      <div class="login-box">
-        <img class="login-colse-btn" src="./statics/images/login-colse.png" alt="">
-        <h3 class="box-title">登录</h3>
-        <div class="waring-box" id="waring-box">
-          <p class="waring-icon"> - </p>
-          <span class="waring-text" id="waring-text">请输入账户名和密码！</span>
-        </div>
-        <div class="content-box">
-          <p>
-            <img class="icon-user icon" src="./statics/images/account.png" alt="">
-            <input class="user-input from-input" type="text" name="username" value="">
-          </p>
-          <p>
-            <img class="icon-password icon" src="./statics/images/password.png" alt="">
-            <input class="password-input from-input" type="password" name="password" value="">
-          </p>
-          <p style="line-height: 20px;">
-            <div class="check-warp">
-              <input class="magic-checkbox" type="checkbox" name="layout" id="c1" checked>
-              <label class="check-text" for="c1">记住密码</label>
-            </div>
-            <div class="check-warp-2">
-                <a href="#">忘记密码</a>
-            </div>
-            <div class="clear"></div>
-          </p>
-          <!-- button -->
-          <div class="login-button state-bg-2" name="login-btn">
-            <input class="login-text" type="button" id="login-submit-btn" name="" value="立即登录">
+  <div class="login-box-motai"> </div>
+  <div class="login-module-box" id="login-module-box">
+    <!-- 登录内容区 -->
+    <div class="login-box">
+      <img class="login-colse-btn" src="./statics/images/login-colse.png" alt="">
+      <h3 class="box-title">登录</h3>
+      <div class="waring-box" id="waring-box">
+        <p class="waring-icon"> - </p>
+        <span class="waring-text" id="waring-text">请输入账户名和密码！</span>
+      </div>
+      <div class="content-box">
+        <p>
+          <img class="icon-user icon" src="./statics/images/account.png" alt="">
+          <input class="user-input from-input" type="text" name="username" value="">
+        </p>
+        <p>
+          <img class="icon-password icon" src="./statics/images/password.png" alt="">
+          <input class="password-input from-input" type="password" name="password" value="">
+        </p>
+        <p style="line-height: 20px;">
+          <div class="check-warp">
+            <input class="magic-checkbox" type="checkbox" name="layout" id="c1" checked>
+            <label class="check-text" for="c1">记住密码</label>
           </div>
-          <!-- 注册 -->
-          <p class="register-p">
-            没有账号，立即
-            <a href="./register.html">注册</a>
-          </p>
-        </div>
-        <!-- 底部 第3方登录 -->
-        <div class="icon-warp-bg">
-          <div class="icon-warp">
-            <div class="qq-box item-box">
-              <img class="icon-img" src="./statics/images/qq_select.png" alt="">
-            </div>
-            <div class="weixin-box item-box">
-              <img class="icon-img" src="./statics/images/weixin_select.png" alt="">
-            </div>
-            <!--  -->
-            <div class="clear"></div>
+          <div class="check-warp-2">
+              <a href="#">忘记密码</a>
           </div>
+          <div class="clear"></div>
+        </p>
+        <!-- button -->
+        <div class="login-button state-bg-2" name="login-btn">
+          <input class="login-text" type="button" id="login-submit-btn" name="" value="立即登录">
+        </div>
+        <!-- 注册 -->
+        <p class="register-p">
+          没有账号，立即
+          <a href="./register.html">注册</a>
+        </p>
+      </div>
+      <!-- 底部 第3方登录 -->
+      <div class="icon-warp-bg">
+        <div class="icon-warp">
+          <div class="qq-box item-box">
+            <img class="icon-img" src="./statics/images/qq_select.png" alt="">
+          </div>
+          <div class="weixin-box item-box">
+            <img class="icon-img" src="./statics/images/weixin_select.png" alt="">
+          </div>
+          <!--  -->
+          <div class="clear"></div>
         </div>
       </div>
     </div>
@@ -260,11 +259,13 @@
     // 打开
     $('#login-btn').on('click', function() {
       $('body').addClass('loging-body')
+      $('#login-module-box').addClass('module-box-position')
       $('.login-box-motai').fadeIn(100)
     })
     // 关闭
     $('.login-colse-btn').on('click', function() {
       $('body').removeClass('loging-body')
+      $('#login-module-box').removeClass('module-box-position')
       $('.login-box-motai').hide()
     })
 
