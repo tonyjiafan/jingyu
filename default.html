@@ -87,28 +87,19 @@
       </div>
       <!-- 轮播 -->
       <div class="swiper-container">
+        <script>
+          function locationUrl(str){
+            console.log(str)
+            window.location.href = str
+          }
+        </script>
         <div class="swiper-wrapper">
-          <!-- <div class="swiper-slide" url="http://www.sina.cn"
-              style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
+          <div class="swiper-slide" onclick="locationUrl('http://www.sina.cn')" style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
           </div>
-          <div class="swiper-slide" url="http://www.baidu.com"
-              style="cursor:pointer; background: url('./statics/images/banner.png') no-repeat center;background-size: cover;">
+          <div class="swiper-slide" onclick="locationUrl('http://www.baidu.cn')" style="cursor:pointer; background: url('./statics/images/banner.png') no-repeat center;background-size: cover;">
           </div>
-          <div class="swiper-slide" url="http://www.google.com"
-              style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
-          </div> -->
-
-          <!-- 将 div 改成 a 标签 为ie兼容-->
-          <a href="http://www.sina.cn" class="swiper-slide"
-              style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
-          </a>
-          <a href="http://www.baidu.com" class="swiper-slide"
-              style="cursor:pointer; background: url('./statics/images/banner.png') no-repeat center;background-size: cover;">
-          </a>
-          <a href="http://www.google.com" class="swiper-slide"
-              style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
-          </a>
-
+          <div class="swiper-slide" onclick="locationUrl('http://www.google.cn')" style="cursor:pointer; background: url('./statics/images/banner_2.png') no-repeat center;background-size: cover;">
+          </div>
         </div>
         <!-- 焦点 -->
         <div class="swiper-pagination"></div>
@@ -247,7 +238,7 @@
       <!-- 活动解决方案 -->
       <div class="home-activity-plan">
         <div class="activity-plan-left">
-          <p class="plan-list current-p" name="3"  url="./solution_index.html">
+          <p class="plan-list current-p" name="5"  url="./solution_index.html">
             <img class="text-img current-img" src="./statics/images/list_title.png" alt="">大型会议解决方案
           </p>
           <p class="plan-list" name="4"  url="./default.html">
@@ -265,10 +256,10 @@
         </div>
         <div class="activity-plan-right">
           <a class="look-more-img" url="" href="./solution_index.html">
-            <img class="plan-imgs plan-img-1" src="./statics/images/image_1.png" alt="">
+            <img class="plan-imgs plan-img-1" src="./statics/images/plan-5.png" alt="">
           </a>
           <a class="look-more-img" url="" href="./solution_index.html">
-            <img class="plan-imgs plan-img-2" src="./statics/images/image_1.png" alt="">
+            <img class="plan-imgs plan-img-2" src="./statics/images/plan-5-5.png" alt="">
           </a>
           <a class="look-more" url="" href="./solution_index.html"> 查看更多 → </a>
         </div>
@@ -281,56 +272,56 @@
       <div class="use-list">
         <div class="use-list-item">
           <a class="click-box" href="#">
-            <div class="use-img">
+            <div class="use-img use-img-1">
               <div class="use-motai">成都开心科技</div>
               <div class="use-motai-2">鲸鱼活动</div>
             </div>
-            <p class="use-title">「成都开心科技」 2017年年会</p>
+            <p class="use-title">世纪阳天新春团拜会</p>
           </a>
         </div>
         <div class="use-list-item">
           <a class="click-box" href="#">
-            <div class="use-img">
+            <div class="use-img use-img-2">
               <div class="use-motai">成都开心科技</div>
               <div class="use-motai-2">鲸鱼活动</div>
             </div>
-            <p class="use-title">「成都开心科技」 2017年年会</p>
+            <p class="use-title">梅赛德斯奔驰新品发布会</p>
           </a>
         </div>
         <div class="use-list-item">
           <a class="click-box" href="#">
-            <div class="use-img">
+            <div class="use-img use-img-3">
               <div class="use-motai">成都开心科技</div>
               <div class="use-motai-2">鲸鱼活动</div>
             </div>
-            <p class="use-title">「成都开心科技」 2017年年会</p>
+            <p class="use-title">杨胜邦设计晚会</p>
           </a>
         </div>
         <div class="use-list-item">
           <a class="click-box" href="#">
-            <div class="use-img">
+            <div class="use-img use-img-4">
               <div class="use-motai">成都开心科技</div>
               <div class="use-motai-2">鲸鱼活动</div>
             </div>
-            <p class="use-title">「成都开心科技」 2017年年会</p>
+            <p class="use-title">卡布集团感恩答谢会</p>
           </a>
         </div>
         <div class="use-list-item">
           <a class="click-box" href="#">
-            <div class="use-img">
+            <div class="use-img use-img-5">
               <div class="use-motai">成都开心科技</div>
               <div class="use-motai-2">鲸鱼活动</div>
             </div>
-            <p class="use-title">「成都开心科技」 2017年年会</p>
+            <p class="use-title">芯聚苏州核心技术全球峰会</p>
           </a>
         </div>
         <div class="use-list-item">
           <a class="click-box" href="#">
-            <div class="use-img">
+            <div class="use-img use-img-6">
               <div class="use-motai">成都开心科技</div>
               <div class="use-motai-2">鲸鱼活动</div>
             </div>
-            <p class="use-title">「成都开心科技」 2017年年会</p>
+            <p class="use-title">猎豹移动发布会</p>
           </a>
         </div>
         <div class="clear"></div>
@@ -343,16 +334,16 @@
     <!-- 合作 -->
     <div class="cooperation-list">
       <div class="child-warp">
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
-        <div class="hezuo-logo-box"> <img src="./statics/images/logo.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-1.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-2.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-3.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-4.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-5.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-6.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-7.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-8.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-9.png" alt=""> </div>
+        <div class="hezuo-logo-box"> <img src="./statics/images/Slice-10.png" alt=""> </div>
         <div class="clear"></div>
       </div>
     </div>
@@ -478,8 +469,8 @@
       // console.log('./statics/images/plan-' + srcTage + '.png')
       var img1 = $('.plan-img-1'),
           img2 = $('.plan-img-2');
-      $(img1).attr('src', './statics/images/image_' + srcTage + '.png').fadeIn(200)
-      $(img2).attr('src', './statics/images/image_' + srcTage + '.png').fadeIn(200)
+      $(img1).attr('src', './statics/images/plan-' + srcTage + '.png').fadeIn(200)
+      $(img2).attr('src', './statics/images/plan-' + srcTage + '-' + srcTage + '.png').fadeIn(200)
     })
     // 锚点 入口显示隐藏
     window.addEventListener('scroll', function(e){

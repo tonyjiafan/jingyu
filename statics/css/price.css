@@ -1,6 +1,12 @@
+.common-middel-box {
+  width: 1200px;
+  margin: auto;
+}
+.single-activice {
+  margin-left: 200px;
+}
 .price-content{
-  margin-bottom: 200px;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 .price-box{
   width: 1200px;
@@ -8,9 +14,10 @@
   margin: 0px auto 50px;
   /* outline: 1px solid red; */
 }
+
 .price-item{
   width: 386px;
-  height: 480px;
+  height: 400px;
   background: #fff;
   box-shadow: 0 0 17px #e8e8e8;
   border-radius: 8px 8px 4px 4px;
@@ -39,11 +46,12 @@
   margin: 40px auto 30px;
 }
 .price-item .title-2{
-  margin: 0 auto 50px;
+  margin: 0 auto;
 }
 .price-item p {
   text-align: left;
   width: 320px;
+  height: 54px;
   margin: 10px auto;
   font-size: 18px;
   color: #999999;
@@ -69,15 +77,67 @@
 }
 .price-item .price-number{
   display: inline-block;
-  width: 220px;
-  height: 88px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -110px;
+  width: 100%;
   line-height: 68px;
   font-size: 20px;
+  font-weight: 600;
   color: #fc5144;
+}
+.discount-package .price-number {
+  margin: 45px 0;
+}
+.price-item .price-units {
+  font-size: 16px;
+  font-weight: normal;
+  color: #999999;
+}
+.price-item .description {
+  width: 320px;
+  margin: auto;
+  font-size: 16px;
+  color: #999999;
+  text-align: left;
+}
+.price-item .description .discount {
+  display: inline-block;
+  width: 70px;
+  height: 24px;
+  background: url('../images/discount.png') no-repeat;
+}
+.price-item .description .discount-text{
+  display: inline-block;
+  width: 250px;
+  float: right; 
+}
+.price-item .description strong {
+  color: #fc5144;
+}
+.price-item .product-btn {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.price-item .activity-btn {
+  display: inline-block;
+  width: 170px;
+  height: 90px;
+  line-height: 75px;
+  font-size: 18px;
+  background: url('../images/price1_normal.png') no-repeat center;
+  background-size: contain;
+  color: #ffffff;
+  transition: all 0.4s;
+}
+.price-item .activity-btn:nth-child(1) {
+  color: #5da6ff;
+  background: url('../images/bt2_normal.png') no-repeat center;
+  background-size: 141px 37px;
+  background-position-y: 19px;
+}
+.price-item .activity-btn:nth-child(1):hover {
+  background: url('../images/bt2_hover.png') no-repeat center;
+  background-size: 141px 37px;
+  background-position-y: 19px;
 }
 .price-item .btn{
   display: inline-block;
@@ -85,7 +145,7 @@
   height: 88px;
   background: #999;
   position: absolute;
-  bottom: -51px;
+  bottom: 0;
   left: 50%;
   margin-left: -110px;
   cursor: pointer;
@@ -102,27 +162,131 @@
 .price-item .btn-1:hover{
   background: url('../images/price1_select.png') no-repeat center;
 }
+.activity-btn:nth-child(2):hover {
+  background: url('../images/price1_select.png') no-repeat center;
+  width: 170px;
+  height: 90px;
+  background-size: contain;
+}
 .price-item .btn-2{
-  background: url('../images/price2_normal.png') no-repeat center;
+  background: url('../images/price1_normal.png') no-repeat center;
 }
 .price-item .btn-2:hover{
-  background: url('../images/price2_select.png') no-repeat center;
+  background: url('../images/price1_select.png') no-repeat center;
 }
 .price-item .btn-3{
-  background: url('../images/price3_normal.png') no-repeat center;
+  background: url('../images/price1_normal.png') no-repeat center;
 }
 .price-item .btn-3:hover{
-  background: url('../images/price3_select.png') no-repeat center;
+  background: url('../images/price1_select.png') no-repeat center;
 }
 .price-item .btn-4{
-  background: url('../images/price4_normal.png') no-repeat center;
+  background: url('../images/price1_normal.png') no-repeat center;
 }
 .price-item .btn-4:hover{
-  background: url('../images/price4_select.png') no-repeat center;
+  background: url('../images/price1_select.png') no-repeat center;
 }
 .price-item img {
   display: block;
   margin: 30px auto 0;
   width: 168px;
   height: 168px;
+}
+.service {
+  width: 1200px;
+  margin: auto;
+  display: table;
+  text-align: center;
+}
+.service span {
+  box-sizing: border-box;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 200px;
+  height: 100px;
+  box-shadow:0 0 17px #e8e8e8;
+  padding: 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  color: #4c4b4b;
+}
+.contact-service {
+  text-align: center;
+}
+.contact-service a {
+  display: inline-block;
+  width: 220px;
+  height: 110px;
+  background: url('../images/contactService.png');
+  background-size: cover;
+  position: relative;
+  top: 100px;
+}
+/* 购买弹框 */
+.buy-box{
+  display: none;
+  position: fixed;
+  width: 360px;
+  background: #fff;
+  border-radius: 6px;
+  top:50%;
+  left: 50%;
+  margin-left: -180px;
+  margin-top: -232px;
+  overflow: hidden;
+  transition: all .8s;
+  opacity: 1;
+  z-index: 999;
+}
+.buy-box .buy-content-box {
+  padding-top: 40px;
+  text-align: center;
+}
+.buy-box .buy-btn {
+  width: 240px;
+  height: 100px;
+  background: url('../images/login_btn_normal.png');
+  margin: 30px auto 50px;
+  font-size: 17px;
+  line-height:85px; 
+  color: #fff;
+  cursor: pointer;
+}
+.buy-box .buy-content-box .buy-title-box {
+  margin: 20px !important;
+}
+.buy-box .buy-title {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+  font-size: 15px;
+  color: #505050;
+}
+.buy-box .buy-title-box b {
+  display: inline-block;
+  line-height: 22px;
+  color: red;
+}
+.buy-box .buy-input {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #e8e8e8;
+  color: #666;
+  padding: 0 5px;
+  border-radius: 4px;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+}
+select {
+  width: 213px;
+  height: 30px;
+  border: 1px solid #e8e8e8;
+  color: #666;
+  padding: 0 5px;
+  border-radius: 4px;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
 }

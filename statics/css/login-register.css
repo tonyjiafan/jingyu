@@ -527,10 +527,10 @@ body{
 .login-a{
   color: #666;
   font-size: 14px;
-  text-decoration: none;
   text-align: right;
   display: inline-block;
   width: 70px;
+  text-decoration: none;
 }
 .login-a:hover{
   color: #444;

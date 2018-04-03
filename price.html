@@ -64,7 +64,43 @@
       </div>
     </div>
   </div>
-
+  <!-- 购买弹框 -->
+  <div class="buy-box">
+      <img class="buy-colse-btn" src="./statics/images/login-colse.png" alt="">
+      <div class="buy-content-box">
+        <div class="buy-content">
+           <!-- 优惠套餐表单 -->
+          <!-- <div class="buy-title-box">
+            <b>*</b><span class="buy-title">公司/姓名</span>
+            <input type="text" class="buy-input">
+          </div>
+          <div class="buy-title-box">
+            <b>*</b><span class="buy-title">联系电话</span>
+            <input type="tel" class="buy-input">
+          </div>
+          <div class="buy-title-box">
+            <span class="buy-title">行业</span>
+            <select>
+              <option value="">科技</option>
+              <option value="">生物</option>
+              <option value="">房地产</option>
+              <option value="">渔牧业</option>
+              <option value="">保险公司</option>
+            </select>
+          </div>
+          <div class="buy-title-box">
+            <span class="buy-title">一年活动场次</span>
+            <select>
+              <option value="">100</option>
+              <option value="">200</option>
+            </select>
+          </div> -->
+        </div>
+        <div class="buy-btn">
+         开通
+        </div>
+      </div>
+  </div>
   <!--  -->
   <div class="home-content">
     <div class="scroll_top"></div>
@@ -144,65 +180,97 @@
     </div>
     <!-- 中  内容区 -->
     <div class="common-middel-content price-content">
-      <h1 class="common-middel-title-1">产品报价</h1>
-      <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
-      <div class="price-box">
-        <div class="price-item">
-          <img class="color-border" src="./statics/images/color_border_1.png" alt="">
-          <h3 class="title">免费版</h3>
-          <p class="title-2">适用于单个会议规模100人以下的活动使用。</p>
-          <ol>
-            <li>免费使用所有标准功能。</li>
-            <li>单个活动参会人数不可大于100人。</li>
-            <li>人数增长可付费升级为场次计费活动。</li>
-            <li>账户可付费升级为专业版或旗舰版。</li>
-            <li>短信及邮件0.10元/条（可选）。</li>
-          </ol>
-          <span class="price-number">￥0.00</span>
-          <a href="#" class="btn btn-1">选择使用</a>
-        </div>
-        <div class="price-item">
-          <img class="color-border" src="./statics/images/color_border_2.png" alt="">
-          <h3 class="title">单次版</h3>
-          <p class="title-2">适合单个会议参会人数比较多的客户选择使用，按照参会用户数量计算费用。</p>
-          <ol>
-            <li>免费使用所有标准功能。</li>
-            <li>活动不限制人数，费用按人数动态计算。</li>
-            <li>短信及邮件0.10元/条（可选）。</li>
-          </ol>
-          <span class="price-number">￥1010.00</span>
-          <a href="#" class="btn btn-2">选择使用</a>
-        </div>
-        <div class="price-item">
-          <img class="color-border" src="./statics/images/color_border_3.png" alt="">
-          <h3 class="title">包年版</h3>
-          <p class="title-2">适合一年内举办活动频率比较高的企业购买使用。</p>
-          <ol>
-            <li>免费使用所有标准功能。</li>
-            <li>单个活动参会人数不可大于5000人。</li>
-            <li>短信及邮件0.10元/条（可选）。</li>
-          </ol>
-          <span class="price-number">￥6000.00</span>
-          <a href="#" class="btn btn-3">选择使用</a>
-        </div>
-        <div class="price-item">
-          <img class="color-border" src="./statics/images/color_border_4.png" alt="">
-          <h3 class="title">定制版</h3>
-          <p class="title-2">适合一年内举办活动频率比较高的企业购买使用。</p>
-          <ol>
-            <li>免费使用所有标准功能。</li>
-            <li>单个活动参会人数不可大于5000人。</li>
-            <li>短信及邮件0.10元/条（可选）。</li>
-          </ol>
-          <span class="price-number">￥1000.00</span>
-          <a href="#" class="btn btn-4">选择使用</a>
-        </div>
-
-        <!--  -->
-        <div class="clear"></div>
+      <div class="common-middel-box">
+        <h1 class="common-middel-title-1">按单场活动购买服务</h1>
+        <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
       </div>
+      <div class="price-box">
+        <div class="single-activice">
+          <div class="price-item">
+            <img class="color-border" src="./statics/images/color_border_1.png" alt="">
+            <h3 class="title">会务云</h3>
+            <p class="title-2">可以使用会务云所有标准功能，按参会人员数量收费</p>
+            <span class="price-number">￥10 <span class="price-units">元/人</span></span>
+            <div class="description">
+              <span class="discount"></span>
+              <div class="discount-text">
+                满200人享<strong>9</strong>折优惠; 满500人享<strong>8</strong>折优惠; 满1000人享<strong>7</strong>折优惠; 
+              </div>
+            </div>
+            <div  class="product-btn">
+              <a href="javascript:void(0)" class="activity-btn">试用</a>
+              <a href="javascript:void(0)" class="activity-btn">立即开通</a>
+            </div>
+          </div>
+          <div class="price-item">
+              <img class="color-border" src="./statics/images/color_border_1.png" alt="">
+              <h3 class="title">互动云</h3>
+              <p class="title-2">根据选择的功能进行收费</p>
+              <span class="price-number">￥10 <span class="price-units">元/人</span></span>
+              <div class="description">
+               注：互动云功能有效期为24小时
+              </div>
+              <div class="product-btn">
+                <a href="javascript:void(0)" class="activity-btn">试用</a>
+                <a href="javascript:void(0)" class="activity-btn">立即开通</a>
+              </div>
+            </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="common-middel-box">
+          <h1 class="common-middel-title-1">优惠套餐</h1>
+          <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
+      </div>
+      <div class="price-box discount-package">
+          <div class="price-item">
+            <img class="color-border" src="./statics/images/color_border_1.png" alt="">
+            <h3 class="title">会务云套餐</h3>
+            <p class="title-2">适合一年内举办活动频率比较高的企业购买使用。可使用会务云的所有功能。</p>
+            <span class="price-number"> <span class="price-units">低至</span> ￥3000 <span class="price-units">元/年</span></span>
+            <a href="javascript:void(0)" class="btn btn-2">定制我的专属套餐</a>
+          </div>
+          <div class="price-item">
+            <img class="color-border" src="./statics/images/color_border_1.png" alt="">
+            <h3 class="title">互动云套餐</h3>
+            <p class="title-2">适合一年内举办活动频率比较高的企业购买使用。</p>
+            <span class="price-number"> <span class="price-units">低至</span> ￥2000 <span class="price-units">元/年</span></span>
+            <a href="javascript:void(0)" class="btn btn-3">定制我的专属套餐</a>
+          </div>
+          <div class="price-item">
+            <img class="color-border" src="./statics/images/color_border_1.png" alt="">
+            <h3 class="title">组和云套餐</h3>
+            <p class="title-2">适合一年内举办活动频率比较高的企业购买使用。</p>
+            <span class="price-number"> <span class="price-units">低至</span> ￥4000 <span class="price-units">元/年</span></span>
+            <a href="javascript:void(0)" class="btn btn-4">定制我的专属套餐</a>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="common-middel-box">
+            <h1 class="common-middel-title-1">增值服务</h1>
+            <img class="common-middel-border" src="./statics/images/fengexian.png" alt="">
+        </div>
+        <div class="service">
+            <span>
+              短信及邮件群发服务<br>0.10元/条
+            </span>
+            <span>
+              定制设计会议官网
+            </span>
+            <span>
+              功能深度定制开发
+            </span>
+            <span>
+              会议签到硬件支持
+            </span>
+            <span>
+              现场技术支持
+            </span>
+        </div>
+        <div class="contact-service">
+            <a href="#"></a>
+        </div>
     </div>
-
     <!-- footer -->
     <div class="footer">
       <div class="ft-list-warp">
@@ -268,7 +336,7 @@
       $('#login-module-box').removeClass('module-box-position')
       $('.login-box-motai').hide()
     })
-
+    
     // 登录
     var warningDom = $('#waring-box'),
         waringText = $('#waring-text');
@@ -300,6 +368,34 @@
     })
     // 返回顶部
     $('.scroll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 1000)})
+
+    // 购买关闭
+    $('.buy-colse-btn').on('click', function() {
+      $('.login-box-motai').hide(100)
+      $('.buy-box').hide(100)
+    })
+
+    // 试用购买弹框
+    $('.activity-btn').on('click', function() {
+      $('.login-box-motai').fadeIn(100)
+      $('.buy-box').fadeIn(100)
+      $('.buy-btn').html(' 立即开通/申请试用')
+      console.log()
+      $('.buy-content').html('<div class="buy-title-box"><span class="buy-title">公司/姓名</span><input type="text" class="buy-input"></div>'
+      +'<div class="buy-title-box"><span class="buy-title">联系电话</span><input type="tel" class="buy-input"></div>')
+    })
+
+    // 定制套餐购买
+    $('.btn').on('click', function() {
+      $('.login-box-motai').fadeIn(100)
+      $('.buy-box').fadeIn(100)
+      $('.buy-btn').html(' 获取优惠套餐方案')
+      console.log()
+      $('.buy-content').html('<div class="buy-title-box"><b>*</b><span class="buy-title">公司/姓名</span><input type="text" class="buy-input"></div>'
+      +'<div class="buy-title-box"><b>*</b><span class="buy-title">联系电话</span><input type="tel" class="buy-input"></div>'
+      +'<div class="buy-title-box"><span class="buy-title">行业</span><select><option value="">科技</option><option value="">生物</option><option value="">房地产</option><option value="">渔牧业</option><option value="">保险公司</option></select></div>'
+      +'<div class="buy-title-box"><span class="buy-title">一年活动场次</span><select><option value="">100</option><option value="">200</option></select></div></div>')
+    })
   })
 </script>
 </body>
